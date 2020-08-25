@@ -1,0 +1,151 @@
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x64\msvcr120.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x86\msvcr120.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.exe.config
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.exe.manifest
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.application
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.exe
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.pdb
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\MetroFramework.Design.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\MetroFramework.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\MetroFramework.Fonts.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.Common.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.Design.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.WinForms.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.SqlServer.Types.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Tulpep.NotificationWindow.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\EnvDTE.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\stdole.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.VSHelp.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.ProjectAggregator.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.ComponentModelHost.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Designer.Interfaces.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Debugger.InteropA.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\EnvDTE80.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.Build.Tasks.Core.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Data.Services.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\VSLangProj.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Data.Core.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\VSLangProj80.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.ManagedInterfaces.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.WCFReference.Interop.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Newtonsoft.Json.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.GraphModel.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.MSXML.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.Build.Utilities.Core.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.Build.Framework.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\VSLangProj2.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Designer.Interfaces.xml
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.xml
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.WCFReference.Interop.xml
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.exe.config
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form1.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Formqty.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.FormSearchinstockin.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_addbrand.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_addcategory.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_addproduct.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Adjustments.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Brand.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_CancelDetails.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_category.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_changepass.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_customerlist.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Customers.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_dashboard.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_discount.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_InventoryReport.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_login.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_lookup.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_POS.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_products.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_receipt.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Records.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_reportsold.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_settlepayment.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Solditems.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_solditemschart.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Stocks.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_storedetails.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_UserAccounts.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Vendor.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_vendorlist.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_voidby.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Properties.Resources.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csproj.GenerateResource.cache
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\RdlCompile.cache
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\RdlCompile.compiled
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csproj.CoreCompileInputs.cache
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.exe.manifest
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.application
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csproj.CopyComplete
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.exe
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.pdb
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_paynow.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_customerpurchases.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_vendorspurchases.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_vendortotal.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_customerpayment.resources
+E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csprojAssemblyReference.cache
