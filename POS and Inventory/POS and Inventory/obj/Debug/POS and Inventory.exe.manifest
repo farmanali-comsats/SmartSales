@@ -44,26 +44,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EnvDTE.dll" size="254840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EnvDTE.dll" size="254856">
       <assemblyIdentity name="EnvDTE" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>akNtLn6BD8ZaODonnQERpox0b71kkEOFEluRDofL6HM=</dsig:DigestValue>
+        <dsig:DigestValue>eFNc+TEegVezHaXK/aRTY1T/Z4fg/kNR2HzJ7JN7+bA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EnvDTE80.dll" size="144256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EnvDTE80.dll" size="144264">
       <assemblyIdentity name="EnvDTE80" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e0VcS6cYX9QC8T/k+N0D3/7u7C2R77sSUNSnHLeqE0k=</dsig:DigestValue>
+        <dsig:DigestValue>Ool7YT7HI07YX2wi+xPXY8RqDSsu6oJGEe/j3JB1SWs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -812,14 +812,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13192">
       <assemblyIdentity name="Microsoft.VisualStudio.ProjectAggregator" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Qt/Ar16fr/SvEC7MD9uCTrdcribONLiqRlia6idM9m8=</dsig:DigestValue>
+        <dsig:DigestValue>v4UwliqiwrcOrjPLnLsmR1w7Zkl8Q3BJFZZ2xwW36kY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -980,14 +980,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.VSHelp.dll" size="20352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.VSHelp.dll" size="20360">
       <assemblyIdentity name="Microsoft.VisualStudio.VSHelp" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nBn3whxf/QOMJ0nhw/KtKAUenFpKNamuZnYi1UinkH0=</dsig:DigestValue>
+        <dsig:DigestValue>a5MvrqnvCwILy/MKXrhPCzK+vxKq8xqy5SyAjA3SIfY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1016,26 +1016,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="POS and Inventory.exe" size="3934176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="POS and Inventory.exe" size="3929600">
       <assemblyIdentity name="POS and Inventory" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kUDx6w92zrgikskD0ydoto0dNnWmiNVj6UDoebPyuOQ=</dsig:DigestValue>
+        <dsig:DigestValue>cjXrLX71U7v6QbEUmdYdDb649WYuVWPC8rH9E6/OFoY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="25472">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="25480">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1wGY1g/glN+iY19WufNHnAftDmjNJSPQZwD5jt3f1uQ=</dsig:DigestValue>
+        <dsig:DigestValue>GG/bJw9FnTOrwWlAT4ADENstB6x+XwxZGCkqSpfqols=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1052,14 +1052,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VSLangProj.dll" size="62544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VSLangProj.dll" size="62344">
       <assemblyIdentity name="VSLangProj" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uMuB47TJlDRWEmtdguzfvyWM68GLjiiVvb2bsZkTCvM=</dsig:DigestValue>
+        <dsig:DigestValue>9MFUuy49KYDFKTgvhD3LvRkUTWuRnr51g6BkAtiewDU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1071,19 +1071,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6BAA2bzI9vw2Z7aY198OgHfAUUaZA4nMgW0ssQf3D20=</dsig:DigestValue>
+        <dsig:DigestValue>X4VS+9JDiT4VsHNXhpllvjY6A49VwR93wgVnpG4+Qyk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VSLangProj80.dll" size="82816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VSLangProj80.dll" size="82824">
       <assemblyIdentity name="VSLangProj80" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DX2UZ6zHVsmcEeZyx0evZnEARd4rnm/+Dt8qNx4I438=</dsig:DigestValue>
+        <dsig:DigestValue>Lm8401Y3ZuhXE2rQekrY5ZtUz/JhBEP/RNffCjBw3qM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1102,7 +1102,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0Z461Hqp0Jr5NfkoplVyunBwdrhtG7qKXtnfnMKNos0=</dsig:DigestValue>
+      <dsig:DigestValue>SrOgThYlBmGwdXaI7xy86rIrj4cKvLJeB9rsHpQaiLY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">
