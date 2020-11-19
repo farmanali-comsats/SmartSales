@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Customers));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,8 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Customers));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
             this.lbl_categoryitle = new System.Windows.Forms.Label();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -68,7 +67,6 @@
             this.col_change = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_paymentdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paynow = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,10 +74,14 @@
             this.Column_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.paynow = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -88,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,19 +104,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1044, 48);
             this.panel1.TabIndex = 4;
-            // 
-            // pictureBox_cancel
-            // 
-            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
-            this.pictureBox_cancel.Location = new System.Drawing.Point(1015, 4);
-            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox_cancel.Name = "pictureBox_cancel";
-            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
-            this.pictureBox_cancel.TabIndex = 4;
-            this.pictureBox_cancel.TabStop = false;
-            this.pictureBox_cancel.Visible = false;
-            this.pictureBox_cancel.Click += new System.EventHandler(this.pictureBox_cancel_Click);
             // 
             // lbl_categoryitle
             // 
@@ -133,7 +123,7 @@
             this.metroTabControl1.Controls.Add(this.tabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(0, 55);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1041, 324);
             this.metroTabControl1.TabIndex = 5;
             this.metroTabControl1.UseCustomBackColor = true;
@@ -441,13 +431,6 @@
             this.col_paymentdate.ReadOnly = true;
             this.col_paymentdate.Width = 111;
             // 
-            // paynow
-            // 
-            this.paynow.HeaderText = "";
-            this.paynow.Image = ((System.Drawing.Image)(resources.GetObject("paynow.Image")));
-            this.paynow.Name = "paynow";
-            this.paynow.ReadOnly = true;
-            // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -540,6 +523,32 @@
             this.col_contact.ReadOnly = true;
             this.col_contact.Width = 87;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn2.Width = 17;
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn3.HeaderText = "";
+            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn3.Width = 17;
+            // 
             // EDIT
             // 
             this.EDIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -562,6 +571,26 @@
             this.DELETE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.DELETE.Width = 17;
             // 
+            // paynow
+            // 
+            this.paynow.HeaderText = "";
+            this.paynow.Image = ((System.Drawing.Image)(resources.GetObject("paynow.Image")));
+            this.paynow.Name = "paynow";
+            this.paynow.ReadOnly = true;
+            // 
+            // pictureBox_cancel
+            // 
+            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
+            this.pictureBox_cancel.Location = new System.Drawing.Point(1015, 4);
+            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox_cancel.Name = "pictureBox_cancel";
+            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox_cancel.TabIndex = 4;
+            this.pictureBox_cancel.TabStop = false;
+            this.pictureBox_cancel.Visible = false;
+            this.pictureBox_cancel.Click += new System.EventHandler(this.pictureBox_cancel_Click);
+            // 
             // Form_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -579,7 +608,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_Customers_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -589,6 +617,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -636,5 +665,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_contact;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
     }
 }

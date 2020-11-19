@@ -344,7 +344,7 @@ train, test = X[0:train_size], X[train_size:]
 # walk-forward validation
 history = [x for x in train]
 predictions = list()
-bias = 165.904728
+bias = 86.775863
 for i in range(len(test)):
     # difference data
     months_in_year = 12
@@ -452,7 +452,7 @@ diff = difference(X, months_in_year)
 model = ARIMA(diff, mset)
 model_fit = model.fit(trend='nc', disp=0)
 # bias constant, could be calculated from in-sample mean residual
-bias = 165.904728
+bias = 86.775863
 # save model
 model_fit.save('model.pkl')
 numpy.save('model_bias.npy', [bias])

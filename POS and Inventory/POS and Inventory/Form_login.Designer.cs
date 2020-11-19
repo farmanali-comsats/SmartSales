@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_reset = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_reset = new System.Windows.Forms.Button();
             this.tft_username = new MetroFramework.Controls.MetroTextBox();
             this.tft_pass = new MetroFramework.Controls.MetroTextBox();
             this.btn_cancel = new System.Windows.Forms.Button();
@@ -42,8 +42,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel1.Controls.Add(this.btn_reset);
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -52,28 +51,29 @@
             this.panel1.Size = new System.Drawing.Size(328, 245);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(328, 245);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // btn_reset
             // 
-            this.btn_reset.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_reset.BackColor = System.Drawing.Color.NavajoWhite;
             this.btn_reset.Enabled = false;
             this.btn_reset.FlatAppearance.BorderSize = 0;
             this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reset.Location = new System.Drawing.Point(2, 2);
+            this.btn_reset.Location = new System.Drawing.Point(0, 423);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(14, 12);
             this.btn_reset.TabIndex = 1;
             this.btn_reset.UseVisualStyleBackColor = false;
             this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(43, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 237);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // tft_username
             // 
@@ -179,9 +179,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(328, 434);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.tft_pass);

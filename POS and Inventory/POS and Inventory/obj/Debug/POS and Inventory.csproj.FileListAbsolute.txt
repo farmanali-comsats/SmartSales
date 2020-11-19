@@ -450,3 +450,11 @@ D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\POS and Inventor
 D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\POS and Inventory.csproj.CopyComplete
 D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\POS and Inventory.exe
 D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\POS and Inventory.pdb
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\POS and Inventory.csprojAssemblyReference.cache
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Debug\zxing.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Debug\zxing.presentation.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Debug\zxing.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Debug\zxing.presentation.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\RdlCompile.cache
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\RdlCompile.compiled
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Debug\POS_and_Inventory.Form_Demand.resources

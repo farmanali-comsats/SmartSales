@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -133,6 +135,7 @@ namespace POS_and_Inventory
         }
         public void loadcritical()
         {
+            //[CallerMemberName] string memberName = "" used for caller information
             ReportDataSource rptDS;
             try
             {
@@ -160,6 +163,24 @@ namespace POS_and_Inventory
                 reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
                 reportViewer1.ZoomMode = ZoomMode.Percent;
                 reportViewer1.ZoomPercent = 100;
+
+                //[CallerMemberName] string memberName = "",
+                //MessageBox.Show(memberName.ToString());               
+                //if (memberName.ToString().Equals("btn_export_Click"))
+                //{
+                //    // Variables
+                //    Warning[] warnings;
+                //    string[] streamIds;
+                //    string mimeType = string.Empty;
+                //    string encoding = string.Empty;
+                //    string extension = string.Empty;
+
+
+                //    byte[] bytes = reportViewer1.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);                    
+                //    String filename = Application.StartupPath + @"\Records\Critical-" + DateTime.Now.ToShortDateString().ToString() + ".pdf";
+                //    File.WriteAllBytes(filename, bytes);
+                //    //System.Diagnostics.Process.Start(filename);
+                //}
             }
             catch (Exception ex)
             {

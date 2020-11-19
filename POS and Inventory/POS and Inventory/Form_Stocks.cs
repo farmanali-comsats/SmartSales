@@ -17,7 +17,7 @@ namespace POS_and_Inventory
         SqlCommand cm = new SqlCommand();
         mydatabase db = new mydatabase();
         SqlDataReader dr;
-        String stitle = "POS System";
+        String stitle = "Smart Sales System";
         public Form_Stocks()
         {
             InitializeComponent();
@@ -159,6 +159,7 @@ namespace POS_and_Inventory
             }
         }
 
+
         public void clear()
         {
             tft_stockinby.Clear();
@@ -180,15 +181,15 @@ namespace POS_and_Inventory
         {
             try
             {
+                cb_vname.Text = "";
+                tft_address.Text = "";
+                cb_vname.Items.Clear();
                 con.Open();
                 cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "'", con);
                 dr = cm.ExecuteReader();
-                dr.Read();
-                if (dr.HasRows)
+                while (dr.Read())
                 {
-                    lbl_vid.Text = dr["id"].ToString();
-                    tft_person.Text = dr["contactperson"].ToString();
-                    tft_address.Text = dr["address"].ToString();
+                    cb_vname.Items.Add(dr["contactperson"].ToString());
                 }
                 dr.Close();
                 con.Close();
@@ -210,6 +211,35 @@ namespace POS_and_Inventory
         private void pictureBox_cancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void cb_vname_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "' and contactperson like '"+cb_vname.Text+"'", con);
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    lbl_vid.Text = dr["id"].ToString();
+                    //cb_vname.Text = dr["contactperson"].ToString();
+                    tft_address.Text = dr["address"].ToString();
+                }
+                dr.Close();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void cb_vname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

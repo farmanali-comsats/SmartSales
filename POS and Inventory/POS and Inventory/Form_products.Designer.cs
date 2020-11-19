@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_products));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tft_search = new MetroFramework.Controls.MetroTextBox();
@@ -50,6 +51,7 @@
             this.col_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_reorder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
@@ -69,14 +71,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 40);
+            this.panel1.Size = new System.Drawing.Size(947, 40);
             this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.tft_search);
-            this.panel2.Location = new System.Drawing.Point(439, 0);
+            this.panel2.Location = new System.Drawing.Point(453, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(417, 40);
             this.panel2.TabIndex = 3;
@@ -115,13 +117,13 @@
             this.tft_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tft_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.tft_search.TextChanged += new System.EventHandler(this.tft_search_TextChanged);
-            this.tft_search.Click += new System.EventHandler(this.tft_search_Click);
+            this.tft_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tft_search_KeyDown);
             // 
             // pictureBox_cancel
             // 
             this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
-            this.pictureBox_cancel.Location = new System.Drawing.Point(905, 3);
+            this.pictureBox_cancel.Location = new System.Drawing.Point(919, 3);
             this.pictureBox_cancel.Name = "pictureBox_cancel";
             this.pictureBox_cancel.Size = new System.Drawing.Size(25, 28);
             this.pictureBox_cancel.TabIndex = 2;
@@ -132,7 +134,7 @@
             // 
             this.picbox_addproduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picbox_addproduct.Image = ((System.Drawing.Image)(resources.GetObject("picbox_addproduct.Image")));
-            this.picbox_addproduct.Location = new System.Drawing.Point(874, 3);
+            this.picbox_addproduct.Location = new System.Drawing.Point(888, 3);
             this.picbox_addproduct.Name = "picbox_addproduct";
             this.picbox_addproduct.Size = new System.Drawing.Size(25, 28);
             this.picbox_addproduct.TabIndex = 1;
@@ -175,16 +177,17 @@
             this.col_cost,
             this.Column_price,
             this.Column_reorder,
+            this.vid,
             this.EDIT,
             this.DELETE});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 40);
@@ -192,9 +195,10 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(933, 548);
+            this.dataGridView1.Size = new System.Drawing.Size(947, 548);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // SNo
             // 
@@ -232,7 +236,7 @@
             // 
             this.Column_description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column_description.HeaderText = "Description";
-            this.Column_description.MinimumWidth = 10;
+            this.Column_description.MinimumWidth = 150;
             this.Column_description.Name = "Column_description";
             this.Column_description.ReadOnly = true;
             // 
@@ -280,6 +284,17 @@
             this.Column_reorder.ReadOnly = true;
             this.Column_reorder.Width = 79;
             // 
+            // vid
+            // 
+            this.vid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.vid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.vid.HeaderText = "Vendor";
+            this.vid.MinimumWidth = 75;
+            this.vid.Name = "vid";
+            this.vid.ReadOnly = true;
+            this.vid.Width = 75;
+            // 
             // EDIT
             // 
             this.EDIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -306,7 +321,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 588);
+            this.ClientSize = new System.Drawing.Size(947, 588);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -314,6 +329,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_products_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).EndInit();
@@ -342,6 +358,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_reorder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vid;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
     }

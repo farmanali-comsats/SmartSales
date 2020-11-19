@@ -149,3 +149,160 @@ E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory
 E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_vendortotal.resources
 E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_customerpayment.resources
 E:\C# Projects\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csprojAssemblyReference.cache
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x64\msvcr120.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x86\msvcr120.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.exe.config
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.exe.manifest
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.application
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.exe
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\POS and Inventory.pdb
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\MetroFramework.Design.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\MetroFramework.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\MetroFramework.Fonts.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.Design.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.SqlServer.Types.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Tulpep.NotificationWindow.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zxing.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zxing.presentation.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\EnvDTE.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\stdole.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.VSHelp.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Designer.Interfaces.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Debugger.InteropA.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\EnvDTE80.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.Build.Tasks.Core.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Data.Services.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\VSLangProj.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Data.Core.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\VSLangProj80.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.ManagedInterfaces.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.WCFReference.Interop.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Newtonsoft.Json.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.GraphModel.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.MSXML.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.Build.Utilities.Core.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.Build.Framework.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\VSLangProj2.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zxing.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zxing.presentation.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.Designer.Interfaces.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\Microsoft.VisualStudio.WCFReference.Interop.xml
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.exe.config
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form1.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Formqty.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.FormSearchinstockin.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_addbrand.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_addcategory.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_addproduct.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Adjustments.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Brand.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_CancelDetails.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_category.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_changepass.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_customerlist.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_customerpayment.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_customerpurchases.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Customers.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_dashboard.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_discount.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_InventoryReport.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_login.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_lookup.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_paynow.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_POS.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_products.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_receipt.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Records.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_reportsold.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_settings.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_settlepayment.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Solditems.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_solditemschart.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Stocks.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_storedetails.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_UserAccounts.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Vendor.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_vendorlist.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_vendorspurchases.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_vendortotal.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_voidby.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Properties.Resources.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csproj.GenerateResource.cache
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csproj.CoreCompileInputs.cache
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.exe.manifest
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.application
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csproj.CopyComplete
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.exe
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.pdb
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS and Inventory.csprojAssemblyReference.cache
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\POS_and_Inventory.Form_Demand.resources
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\RdlCompile.cache
+D:\Git\smartsales\POS and Inventory\POS and Inventory\obj\Release\RdlCompile.compiled

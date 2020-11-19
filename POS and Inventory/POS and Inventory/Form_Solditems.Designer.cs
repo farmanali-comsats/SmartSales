@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Solditems));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_top = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tft_search = new MetroFramework.Controls.MetroTextBox();
             this.picbox_cancel = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,11 +58,10 @@
             this.dt1 = new System.Windows.Forms.DateTimePicker();
             this.dt2 = new System.Windows.Forms.DateTimePicker();
             this.lbl_total = new System.Windows.Forms.Label();
-            this.btn_load = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
             this.cb_cashiers = new System.Windows.Forms.ComboBox();
             this.lbl_profit = new System.Windows.Forms.Label();
             this.btn_profit = new System.Windows.Forms.Button();
-            this.tft_search = new MetroFramework.Controls.MetroTextBox();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_cancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,6 +70,10 @@
             // panel_top
             // 
             this.panel_top.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel_top.Controls.Add(this.label5);
+            this.panel_top.Controls.Add(this.label4);
+            this.panel_top.Controls.Add(this.label3);
+            this.panel_top.Controls.Add(this.label2);
             this.panel_top.Controls.Add(this.tft_search);
             this.panel_top.Controls.Add(this.picbox_cancel);
             this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -73,6 +81,93 @@
             this.panel_top.Name = "panel_top";
             this.panel_top.Size = new System.Drawing.Size(1278, 40);
             this.panel_top.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label5.Location = new System.Drawing.Point(871, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 30);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "0.00";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label4.Location = new System.Drawing.Point(470, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 30);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "0.00";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label3.Location = new System.Drawing.Point(182, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 30);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "0.00";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label2.Location = new System.Drawing.Point(12, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 30);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "0.00";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tft_search
+            // 
+            this.tft_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.tft_search.CustomButton.Image = null;
+            this.tft_search.CustomButton.Location = new System.Drawing.Point(294, 1);
+            this.tft_search.CustomButton.Name = "";
+            this.tft_search.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.tft_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tft_search.CustomButton.TabIndex = 1;
+            this.tft_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tft_search.CustomButton.UseSelectable = true;
+            this.tft_search.CustomButton.Visible = false;
+            this.tft_search.DisplayIcon = true;
+            this.tft_search.Icon = ((System.Drawing.Image)(resources.GetObject("tft_search.Icon")));
+            this.tft_search.Lines = new string[0];
+            this.tft_search.Location = new System.Drawing.Point(928, 9);
+            this.tft_search.Margin = new System.Windows.Forms.Padding(0);
+            this.tft_search.MaxLength = 32767;
+            this.tft_search.Name = "tft_search";
+            this.tft_search.PasswordChar = '\0';
+            this.tft_search.PromptText = "Search Here";
+            this.tft_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tft_search.SelectedText = "";
+            this.tft_search.SelectionLength = 0;
+            this.tft_search.SelectionStart = 0;
+            this.tft_search.ShortcutsEnabled = true;
+            this.tft_search.Size = new System.Drawing.Size(318, 25);
+            this.tft_search.TabIndex = 23;
+            this.tft_search.UseSelectable = true;
+            this.tft_search.WaterMark = "Search Here";
+            this.tft_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tft_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tft_search.TextChanged += new System.EventHandler(this.tft_search_TextChanged);
             // 
             // picbox_cancel
             // 
@@ -94,14 +189,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -116,14 +211,14 @@
             this.col_disc,
             this.col_total,
             this.col_cancel});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 74);
             this.dataGridView1.Name = "dataGridView1";
@@ -185,8 +280,8 @@
             // col_price
             // 
             this.col_price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.col_price.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.col_price.DefaultCellStyle = dataGridViewCellStyle8;
             this.col_price.HeaderText = "Price";
             this.col_price.Name = "col_price";
             this.col_price.ReadOnly = true;
@@ -195,8 +290,8 @@
             // col_qty
             // 
             this.col_qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.col_qty.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.col_qty.DefaultCellStyle = dataGridViewCellStyle9;
             this.col_qty.HeaderText = "QTY";
             this.col_qty.Name = "col_qty";
             this.col_qty.ReadOnly = true;
@@ -205,8 +300,8 @@
             // col_disc
             // 
             this.col_disc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.col_disc.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.col_disc.DefaultCellStyle = dataGridViewCellStyle10;
             this.col_disc.HeaderText = "Discount";
             this.col_disc.Name = "col_disc";
             this.col_disc.ReadOnly = true;
@@ -215,8 +310,8 @@
             // col_total
             // 
             this.col_total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.col_total.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.col_total.DefaultCellStyle = dataGridViewCellStyle11;
             this.col_total.HeaderText = "Total";
             this.col_total.Name = "col_total";
             this.col_total.ReadOnly = true;
@@ -247,6 +342,7 @@
             this.dt1.Name = "dt1";
             this.dt1.Size = new System.Drawing.Size(125, 25);
             this.dt1.TabIndex = 6;
+            this.dt1.Value = new System.DateTime(2020, 11, 17, 3, 49, 19, 0);
             this.dt1.ValueChanged += new System.EventHandler(this.dt1_ValueChanged);
             // 
             // dt2
@@ -271,23 +367,23 @@
             this.lbl_total.Text = "0.00";
             this.lbl_total.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // btn_load
+            // btn_print
             // 
-            this.btn_load.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_load.FlatAppearance.BorderSize = 0;
-            this.btn_load.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_load.ForeColor = System.Drawing.Color.White;
-            this.btn_load.Image = ((System.Drawing.Image)(resources.GetObject("btn_load.Image")));
-            this.btn_load.Location = new System.Drawing.Point(557, 43);
-            this.btn_load.Name = "btn_load";
-            this.btn_load.Size = new System.Drawing.Size(116, 28);
-            this.btn_load.TabIndex = 18;
-            this.btn_load.Text = " Print Preview";
-            this.btn_load.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_load.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_load.UseVisualStyleBackColor = false;
-            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+            this.btn_print.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_print.FlatAppearance.BorderSize = 0;
+            this.btn_print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_print.ForeColor = System.Drawing.Color.White;
+            this.btn_print.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.Image")));
+            this.btn_print.Location = new System.Drawing.Point(557, 43);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(116, 28);
+            this.btn_print.TabIndex = 18;
+            this.btn_print.Text = " Print Preview";
+            this.btn_print.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_print.UseVisualStyleBackColor = false;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // cb_cashiers
             // 
@@ -331,43 +427,6 @@
             this.btn_profit.UseVisualStyleBackColor = false;
             this.btn_profit.Click += new System.EventHandler(this.btn_profit_Click);
             // 
-            // tft_search
-            // 
-            this.tft_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.tft_search.CustomButton.Image = null;
-            this.tft_search.CustomButton.Location = new System.Drawing.Point(294, 1);
-            this.tft_search.CustomButton.Name = "";
-            this.tft_search.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.tft_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tft_search.CustomButton.TabIndex = 1;
-            this.tft_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tft_search.CustomButton.UseSelectable = true;
-            this.tft_search.CustomButton.Visible = false;
-            this.tft_search.DisplayIcon = true;
-            this.tft_search.Icon = ((System.Drawing.Image)(resources.GetObject("tft_search.Icon")));
-            this.tft_search.Lines = new string[0];
-            this.tft_search.Location = new System.Drawing.Point(928, 9);
-            this.tft_search.Margin = new System.Windows.Forms.Padding(0);
-            this.tft_search.MaxLength = 32767;
-            this.tft_search.Name = "tft_search";
-            this.tft_search.PasswordChar = '\0';
-            this.tft_search.PromptText = "Search Here";
-            this.tft_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tft_search.SelectedText = "";
-            this.tft_search.SelectionLength = 0;
-            this.tft_search.SelectionStart = 0;
-            this.tft_search.ShortcutsEnabled = true;
-            this.tft_search.Size = new System.Drawing.Size(318, 25);
-            this.tft_search.TabIndex = 23;
-            this.tft_search.UseSelectable = true;
-            this.tft_search.WaterMark = "Search Here";
-            this.tft_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tft_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tft_search.TextChanged += new System.EventHandler(this.tft_search_TextChanged);
-            // 
             // Form_Solditems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -378,7 +437,7 @@
             this.Controls.Add(this.btn_profit);
             this.Controls.Add(this.lbl_profit);
             this.Controls.Add(this.cb_cashiers);
-            this.Controls.Add(this.btn_load);
+            this.Controls.Add(this.btn_print);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.dt2);
             this.Controls.Add(this.dt1);
@@ -392,6 +451,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Solditems_KeyDown);
             this.panel_top.ResumeLayout(false);
+            this.panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_cancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -405,7 +465,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_total;
-        public System.Windows.Forms.Button btn_load;
+        public System.Windows.Forms.Button btn_print;
         public System.Windows.Forms.DateTimePicker dt1;
         public System.Windows.Forms.DateTimePicker dt2;
         public System.Windows.Forms.ComboBox cb_cashiers;
@@ -424,5 +484,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_total;
         private System.Windows.Forms.DataGridViewImageColumn col_cancel;
         private MetroFramework.Controls.MetroTextBox tft_search;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

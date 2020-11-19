@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearchinstockin));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearchinstockin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tft_search = new MetroFramework.Controls.MetroTextBox();
@@ -43,6 +43,8 @@
             this.Column_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Select = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tft_bcode = new MetroFramework.Controls.MetroTextBox();
+            this.chb_bcode = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_cancel)).BeginInit();
@@ -52,19 +54,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.Controls.Add(this.chb_bcode);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.picbox_cancel);
             this.panel1.Controls.Add(this.lbl_stokintitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1120, 40);
+            this.panel1.Size = new System.Drawing.Size(679, 40);
             this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.tft_bcode);
             this.panel2.Controls.Add(this.tft_search);
-            this.panel2.Location = new System.Drawing.Point(728, 2);
+            this.panel2.Location = new System.Drawing.Point(283, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(359, 32);
             this.panel2.TabIndex = 7;
@@ -84,13 +88,14 @@
             this.tft_search.CustomButton.UseSelectable = true;
             this.tft_search.CustomButton.Visible = false;
             this.tft_search.DisplayIcon = true;
+            this.tft_search.Enabled = false;
             this.tft_search.Icon = ((System.Drawing.Image)(resources.GetObject("tft_search.Icon")));
             this.tft_search.Lines = new string[0];
             this.tft_search.Location = new System.Drawing.Point(3, 4);
             this.tft_search.MaxLength = 32767;
             this.tft_search.Name = "tft_search";
             this.tft_search.PasswordChar = '\0';
-            this.tft_search.PromptText = "Search Here";
+            this.tft_search.PromptText = "Search By Name Here";
             this.tft_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tft_search.SelectedText = "";
             this.tft_search.SelectionLength = 0;
@@ -99,16 +104,17 @@
             this.tft_search.Size = new System.Drawing.Size(353, 25);
             this.tft_search.TabIndex = 0;
             this.tft_search.UseSelectable = true;
-            this.tft_search.WaterMark = "Search Here";
+            this.tft_search.Visible = false;
+            this.tft_search.WaterMark = "Search By Name Here";
             this.tft_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tft_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.tft_search.TextChanged += new System.EventHandler(this.tft_search_TextChanged);
-            this.tft_search.Click += new System.EventHandler(this.tft_search_Click);
             // 
             // picbox_cancel
             // 
+            this.picbox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picbox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("picbox_cancel.Image")));
-            this.picbox_cancel.Location = new System.Drawing.Point(1093, 3);
+            this.picbox_cancel.Location = new System.Drawing.Point(648, 3);
             this.picbox_cancel.Name = "picbox_cancel";
             this.picbox_cancel.Size = new System.Drawing.Size(25, 28);
             this.picbox_cancel.TabIndex = 2;
@@ -162,7 +168,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 548);
+            this.dataGridView1.Size = new System.Drawing.Size(679, 548);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -216,12 +222,60 @@
             this.Select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Select.Width = 17;
             // 
+            // tft_bcode
+            // 
+            // 
+            // 
+            // 
+            this.tft_bcode.CustomButton.Image = null;
+            this.tft_bcode.CustomButton.Location = new System.Drawing.Point(329, 1);
+            this.tft_bcode.CustomButton.Name = "";
+            this.tft_bcode.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.tft_bcode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tft_bcode.CustomButton.TabIndex = 1;
+            this.tft_bcode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tft_bcode.CustomButton.UseSelectable = true;
+            this.tft_bcode.CustomButton.Visible = false;
+            this.tft_bcode.DisplayIcon = true;
+            this.tft_bcode.Icon = ((System.Drawing.Image)(resources.GetObject("tft_bcode.Icon")));
+            this.tft_bcode.Lines = new string[0];
+            this.tft_bcode.Location = new System.Drawing.Point(3, 3);
+            this.tft_bcode.MaxLength = 32767;
+            this.tft_bcode.Name = "tft_bcode";
+            this.tft_bcode.PasswordChar = '\0';
+            this.tft_bcode.PromptText = "Search By Barcode Here";
+            this.tft_bcode.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tft_bcode.SelectedText = "";
+            this.tft_bcode.SelectionLength = 0;
+            this.tft_bcode.SelectionStart = 0;
+            this.tft_bcode.ShortcutsEnabled = true;
+            this.tft_bcode.Size = new System.Drawing.Size(353, 25);
+            this.tft_bcode.TabIndex = 1;
+            this.tft_bcode.UseSelectable = true;
+            this.tft_bcode.WaterMark = "Search By Barcode Here";
+            this.tft_bcode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tft_bcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tft_bcode.TextChanged += new System.EventHandler(this.tft_bcode_TextChanged);
+            // 
+            // chb_bcode
+            // 
+            this.chb_bcode.AutoSize = true;
+            this.chb_bcode.Checked = true;
+            this.chb_bcode.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chb_bcode.Location = new System.Drawing.Point(190, 9);
+            this.chb_bcode.Name = "chb_bcode";
+            this.chb_bcode.Size = new System.Drawing.Size(75, 21);
+            this.chb_bcode.TabIndex = 8;
+            this.chb_bcode.Text = "Barcode";
+            this.chb_bcode.UseVisualStyleBackColor = true;
+            this.chb_bcode.CheckedChanged += new System.EventHandler(this.chb_bcode_CheckedChanged);
+            // 
             // FormSearchinstockin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1120, 588);
+            this.ClientSize = new System.Drawing.Size(679, 588);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -230,7 +284,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchinstockin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormSearchinstockin_KeyDown);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picbox_cancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -252,5 +308,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_qty;
         private System.Windows.Forms.DataGridViewImageColumn Select;
+        private System.Windows.Forms.CheckBox chb_bcode;
+        private MetroFramework.Controls.MetroTextBox tft_bcode;
     }
 }

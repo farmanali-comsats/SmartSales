@@ -216,10 +216,71 @@ namespace POS_and_Inventory
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.F4)
+            if (e.KeyCode == Keys.Escape)
+            {
+                btn_dashboard_Click(sender, e);
+            }
+            else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.F4)
             {
                 btn_logout_Click(sender, e);
+            }else if (e.KeyCode == Keys.F1)
+            {
+                btn_manage_products_Click(sender,e);
+            }            
+            else if (e.KeyCode == Keys.F2)
+            {
+                btn_vendor_Click(sender, e);
             }
+            else if (e.KeyCode == Keys.F3)
+            {
+                btn_stocks_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F4)
+            {
+                btn_adjustments_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F5)
+            {
+                btn_category_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F6)
+            {
+                btn_brand_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F7)
+            {
+                btn_records_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F8)
+            {
+                btn_saleshistory_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F9)
+            {
+                btn_sys_setting_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F10)
+            {
+                btn_user_setting_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F11)
+            {
+                btn_customer_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.F12)
+            {
+                btn_demands_Click(sender, e);
+            }
+        }
+
+        private void btn_demands_Click(object sender, EventArgs e)
+        {
+            Form_Demand form = new Form_Demand();
+            form.TopLevel = false;
+            panel_main.Controls.Add(form);
+            form.BringToFront();
+            form.loaddemands();
+            form.Show();
         }
     }
 }

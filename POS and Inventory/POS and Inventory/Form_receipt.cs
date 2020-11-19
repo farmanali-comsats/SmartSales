@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,7 @@ namespace POS_and_Inventory
 
                 this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\Reports\Report1.rdlc";
                 this.reportViewer1.LocalReport.DataSources.Clear();
+                
                 
                 DataSet1 ds = new DataSet1();
                 SqlDataAdapter da = new SqlDataAdapter();
@@ -105,10 +107,26 @@ namespace POS_and_Inventory
                 rptdatasource = new ReportDataSource("DataSet1",ds.Tables["dtSold"]);
                 reportViewer1.LocalReport.DataSources.Add(rptdatasource);
                 reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
+                
                 reportViewer1.ZoomMode = ZoomMode.Percent;
                 reportViewer1.ZoomPercent = 100;
+
+                this.reportViewer1.LocalReport.PrintToPrinter();
+
+                // Variables
+                Warning[] warnings;
+                string[] streamIds;
+                string mimeType = string.Empty;
+                string encoding = string.Empty;
+                string extension = string.Empty;
+
                 
-                
+                byte[] bytes = reportViewer1.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
+
+                String filename = Application.StartupPath + @"\Receipts\" +form.lbl_trcode.Text+".pdf";
+                File.WriteAllBytes(filename,bytes);
+                //System.Diagnostics.Process.Start(filename);                               
+
             }
             catch (Exception ex)
             {

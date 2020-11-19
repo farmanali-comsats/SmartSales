@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace POS_and_Inventory
@@ -21,12 +14,15 @@ namespace POS_and_Inventory
         private double ttoal = 0;
         //Form_POS form;
         public String suser;
+        static bool ch = false;
         public Form_Solditems()
         {
+
             InitializeComponent();
             con = new SqlConnection(db.MyConnection());
-            dt1.Value = DateTime.Now;
-            dt2.Value = DateTime.Now;
+            //MessageBox.Show("dt1-"+dt1.Value.ToString("yyyy-MM-dd") +" dt2-"+dt1.Value.ToString("yyyy-MM-dd") +" cb-"+cb_cashiers.Text+".");
+            //dt1.Value = DateTime.Now;
+            //dt2.Value = DateTime.Now;
             //loadrecords();
             loadcashiers();
             this.KeyPreview = true;
@@ -41,33 +37,44 @@ namespace POS_and_Inventory
         {
             int i = 0;
             ttoal = 0;
-
             dataGridView1.Rows.Clear();
             try
             {
                 con.Open();
                 if (cb_cashiers.Text == "All Cashier")
                 {
-                    cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pname,p.pdesc,c.price,c.qty,c.disc,c.total from table_cart as c inner join table_products as p on c.pcode = p.pcode where status like 'Sold' and sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "' and c.transno like '%" + tft_search.Text + "%'or p.pname like '%" + tft_search.Text + "%'order by c.transno", con);
+                    cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pname,p.pdesc,c.price,c.qty,c.disc,c.total from table_cart as c inner join table_products as p on c.pcode = p.pcode where status like 'Sold' and sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "' and (c.transno like '%" + tft_search.Text + "%' or p.pname like '%" + tft_search.Text + "%' or p.pdesc like '%" + tft_search.Text + "%') order by c.transno desc", con);
+                    dr = cm.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        i += 1;
+                        ttoal += double.Parse(dr["total"].ToString());
+                        dataGridView1.Rows.Add(i, dr["id"].ToString(), dr["transno"].ToString(), dr["pcode"].ToString(), dr["pname"].ToString(), dr["pdesc"].ToString(), dr["price"].ToString(), dr["qty"].ToString(), dr["disc"].ToString(), dr["total"].ToString());
+                    }
+                    dr.Close();
+                    con.Close();
                 }
                 else
                 {
-                    cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pname,p.pdesc,c.price,c.qty,c.disc,c.total from table_cart as c inner join table_products as p on c.pcode = p.pcode where status like 'Sold' and sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "' and cashier like '" + cb_cashiers.Text + "'and c.transno like '%" + tft_search.Text + "%'or p.pname like '%" + tft_search.Text + "%'order by c.transno", con);
-                }
-                dr = cm.ExecuteReader();
-                while (dr.Read())
-                {
-                    i += 1;
-                    ttoal += double.Parse(dr["total"].ToString());
-                    dataGridView1.Rows.Add(i, dr["id"].ToString(), dr["transno"].ToString(), dr["pcode"].ToString(), dr["pname"].ToString(), dr["pdesc"].ToString(), dr["price"].ToString(), dr["qty"].ToString(), dr["disc"].ToString(), dr["total"].ToString());
-
+                    cm = new SqlCommand("select id,c.transno,c.pcode,p.pname,p.pdesc,c.price,c.qty,c.disc,c.total from table_cart as c inner join table_products as p on c.pcode = p.pcode where status like 'Sold' and sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "' and cashier like '" + cb_cashiers.Text + "' and (c.transno like '%" + tft_search.Text + "%'or p.pname like '%" + tft_search.Text + "%' or p.pdesc like '%" + tft_search.Text + "%') order by c.transno desc", con);
+                    dr = cm.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        i += 1;
+                        ttoal += double.Parse(dr["total"].ToString());
+                        dataGridView1.Rows.Add(i, dr["id"].ToString(), dr["transno"].ToString(), dr["pcode"].ToString(), dr["pname"].ToString(), dr["pdesc"].ToString(), dr["price"].ToString(), dr["qty"].ToString(), dr["disc"].ToString(), dr["total"].ToString());
+                    }
+                    dr.Close();
+                    con.Close();
                 }
                 dr.Close();
                 con.Close();
+
                 lbl_total.Text = ttoal.ToString("#,##0.00");
             }
             catch (Exception ex)
             {
+                dr.Close();
                 con.Close();
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -75,12 +82,37 @@ namespace POS_and_Inventory
 
         private void dt1_ValueChanged(object sender, EventArgs e)
         {
-            loadrecords();
+            if ((dt1.Value.Date > dt2.Value.Date) && (ch != true))
+            {
+                MessageBox.Show("From Date cannot be greater than To Date", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ch = true;
+                dt1.Value = DateTime.Today;
+                dt2.Value = DateTime.Today;
+                cb_cashiers.Text = String.Empty;
+            }
+            else
+            {
+                loadrecords();
+                ch = false;
+            }
+
         }
 
         private void dt2_ValueChanged(object sender, EventArgs e)
         {
-            loadrecords();
+            if ((dt1.Value.Date > dt2.Value.Date) && (ch != true))
+            {
+                MessageBox.Show("From Date cannot be greater than To Date", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ch = true;
+                dt1.Value = DateTime.Today;
+                dt2.Value = DateTime.Today;
+                cb_cashiers.Text = String.Empty;
+            }
+            else
+            {
+                loadrecords();
+                ch = false;
+            }
         }
 
         private void btn_load_Click(object sender, EventArgs e)
@@ -112,6 +144,7 @@ namespace POS_and_Inventory
             }
             catch (Exception ex)
             {
+                dr.Close();
                 con.Close();
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -159,10 +192,6 @@ namespace POS_and_Inventory
                     this.Dispose();
                 }
             }
-            else
-            {
-                return;
-            }
         }
 
         private void btn_profit_Click(object sender, EventArgs e)
@@ -179,7 +208,6 @@ namespace POS_and_Inventory
         public void Profitcalculate()
         {
             profit = 0;
-            //String sdate = DateTime.Now.ToString("yyyy-MM-dd");
             try
             {
                 con.Open();
@@ -200,6 +228,13 @@ namespace POS_and_Inventory
         private void tft_search_TextChanged(object sender, EventArgs e)
         {
             loadrecords();
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            Form_reportsold form = new Form_reportsold(this);
+            form.loadsoldreport();
+            form.ShowDialog();
         }
     }
 }

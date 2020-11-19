@@ -15,6 +15,7 @@ namespace POS_and_Inventory
 
     public partial class Form_POS : Form
     {
+        Timer timer = new Timer();
         String id;
         String price;
         int qty;
@@ -44,11 +45,6 @@ namespace POS_and_Inventory
             gettransno();
             tft_searchbcode.Enabled = true;
             tft_searchbcode.Focus();
-        }
-
-        private void tft_searchbcode_Click(object sender, EventArgs e)
-        {
-
         }
         public void getcarttotal()
         {
@@ -97,6 +93,11 @@ namespace POS_and_Inventory
         {
             try
             {
+                btn_new_Click(sender, e);
+                timer.Interval = (2000);
+                timer.Tick += new EventHandler(clearbarcode);
+                timer.Start();
+
                 if (tft_searchbcode.Text == String.Empty)
                 {
                     return;
@@ -136,6 +137,10 @@ namespace POS_and_Inventory
                 con.Close();
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+        public void clearbarcode(object sender, EventArgs e)
+        {
+            tft_searchbcode.Text = String.Empty;
         }
         public void AddtoCart(String _pcode, double _price, int _qty, double _cost)
         {

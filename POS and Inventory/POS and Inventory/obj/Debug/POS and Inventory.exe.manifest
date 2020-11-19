@@ -1016,14 +1016,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="POS and Inventory.exe" size="3929600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="POS and Inventory.exe" size="3963904">
       <assemblyIdentity name="POS and Inventory" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cjXrLX71U7v6QbEUmdYdDb649WYuVWPC8rH9E6/OFoY=</dsig:DigestValue>
+        <dsig:DigestValue>Ban5BP6YkjShSg/NbZVvUMIwE5OPd7KSpgh3/24foME=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1087,6 +1087,30 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zxing.dll" size="483328">
+      <assemblyIdentity name="zxing" version="0.16.6.0" publicKeyToken="4E88037AC681FE60" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iUVcNz85s1YU8iFFt+TAu5tjPwt0lGIThg+I/c12nvs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zxing.presentation.dll" size="19968">
+      <assemblyIdentity name="zxing.presentation" version="0.16.6.0" publicKeyToken="4E88037AC681FE60" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tEDT1RDRiRKUCaSjAIvG/m2tNPzBhudTQ2UYDmZET5w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <file name="icon.ico" size="370070">
     <hash>
       <dsig:Transforms>
@@ -1096,13 +1120,13 @@
       <dsig:DigestValue>UE1rR5zJsA8A7xoTTRLOeOvGSdzmlYgCzroW8UXD8nw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="POS and Inventory.exe.config" size="2313">
+  <file name="POS and Inventory.exe.config" size="2294">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SrOgThYlBmGwdXaI7xy86rIrj4cKvLJeB9rsHpQaiLY=</dsig:DigestValue>
+      <dsig:DigestValue>ESpt2FpgkSmkr8a2D8fYQ9nNO7fXFLwsQfUgzQ2fGpw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">

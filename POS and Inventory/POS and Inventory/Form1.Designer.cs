@@ -44,6 +44,7 @@
             this.btn_category = new System.Windows.Forms.Button();
             this.btn_brand = new System.Windows.Forms.Button();
             this.btn_customer = new System.Windows.Forms.Button();
+            this.btn_demands = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_logout = new System.Windows.Forms.Button();
@@ -80,7 +81,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 162);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(263, 514);
+            this.panel3.Size = new System.Drawing.Size(263, 520);
             this.panel3.TabIndex = 16;
             // 
             // tableLayoutPanel1
@@ -100,25 +101,25 @@
             this.tableLayoutPanel1.Controls.Add(this.btn_category, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btn_brand, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btn_customer, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.btn_demands, 0, 12);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 14;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333611F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.330277F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(263, 514);
+            this.tableLayoutPanel1.RowCount = 13;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692801F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.689725F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.689468F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(263, 520);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btn_adjustments
@@ -129,11 +130,11 @@
             this.btn_adjustments.ForeColor = System.Drawing.Color.White;
             this.btn_adjustments.Image = ((System.Drawing.Image)(resources.GetObject("btn_adjustments.Image")));
             this.btn_adjustments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_adjustments.Location = new System.Drawing.Point(3, 159);
+            this.btn_adjustments.Location = new System.Drawing.Point(3, 163);
             this.btn_adjustments.Name = "btn_adjustments";
-            this.btn_adjustments.Size = new System.Drawing.Size(257, 33);
+            this.btn_adjustments.Size = new System.Drawing.Size(257, 34);
             this.btn_adjustments.TabIndex = 15;
-            this.btn_adjustments.Text = "   Stock Adjustment";
+            this.btn_adjustments.Text = "   Stock Adjustment     [F4]";
             this.btn_adjustments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_adjustments.UseVisualStyleBackColor = true;
             this.btn_adjustments.Click += new System.EventHandler(this.btn_adjustments_Click);
@@ -146,11 +147,11 @@
             this.btn_saleshistory.ForeColor = System.Drawing.Color.White;
             this.btn_saleshistory.Image = ((System.Drawing.Image)(resources.GetObject("btn_saleshistory.Image")));
             this.btn_saleshistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_saleshistory.Location = new System.Drawing.Point(3, 315);
+            this.btn_saleshistory.Location = new System.Drawing.Point(3, 323);
             this.btn_saleshistory.Name = "btn_saleshistory";
-            this.btn_saleshistory.Size = new System.Drawing.Size(257, 33);
+            this.btn_saleshistory.Size = new System.Drawing.Size(257, 34);
             this.btn_saleshistory.TabIndex = 12;
-            this.btn_saleshistory.Text = "   Sales History";
+            this.btn_saleshistory.Text = "   Sales History     [F8]";
             this.btn_saleshistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_saleshistory.UseVisualStyleBackColor = true;
             this.btn_saleshistory.Click += new System.EventHandler(this.btn_saleshistory_Click);
@@ -163,11 +164,11 @@
             this.btn_user_setting.ForeColor = System.Drawing.Color.White;
             this.btn_user_setting.Image = ((System.Drawing.Image)(resources.GetObject("btn_user_setting.Image")));
             this.btn_user_setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_user_setting.Location = new System.Drawing.Point(3, 393);
+            this.btn_user_setting.Location = new System.Drawing.Point(3, 403);
             this.btn_user_setting.Name = "btn_user_setting";
-            this.btn_user_setting.Size = new System.Drawing.Size(257, 33);
+            this.btn_user_setting.Size = new System.Drawing.Size(257, 34);
             this.btn_user_setting.TabIndex = 6;
-            this.btn_user_setting.Text = "   User Setting";
+            this.btn_user_setting.Text = "   User Setting     [F10]";
             this.btn_user_setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_user_setting.UseVisualStyleBackColor = true;
             this.btn_user_setting.Click += new System.EventHandler(this.btn_user_setting_Click);
@@ -182,9 +183,9 @@
             this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dashboard.Location = new System.Drawing.Point(3, 3);
             this.btn_dashboard.Name = "btn_dashboard";
-            this.btn_dashboard.Size = new System.Drawing.Size(257, 33);
+            this.btn_dashboard.Size = new System.Drawing.Size(257, 34);
             this.btn_dashboard.TabIndex = 3;
-            this.btn_dashboard.Text = "   Dashboard";
+            this.btn_dashboard.Text = "   Dashboard     [Esc]";
             this.btn_dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_dashboard.UseVisualStyleBackColor = true;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
@@ -197,11 +198,11 @@
             this.btn_sys_setting.ForeColor = System.Drawing.Color.White;
             this.btn_sys_setting.Image = ((System.Drawing.Image)(resources.GetObject("btn_sys_setting.Image")));
             this.btn_sys_setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sys_setting.Location = new System.Drawing.Point(3, 354);
+            this.btn_sys_setting.Location = new System.Drawing.Point(3, 363);
             this.btn_sys_setting.Name = "btn_sys_setting";
-            this.btn_sys_setting.Size = new System.Drawing.Size(257, 33);
+            this.btn_sys_setting.Size = new System.Drawing.Size(257, 34);
             this.btn_sys_setting.TabIndex = 5;
-            this.btn_sys_setting.Text = "   System Setting";
+            this.btn_sys_setting.Text = "   System Setting     [F9]";
             this.btn_sys_setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_sys_setting.UseVisualStyleBackColor = true;
             this.btn_sys_setting.Click += new System.EventHandler(this.btn_sys_setting_Click);
@@ -214,11 +215,11 @@
             this.btn_vendor.ForeColor = System.Drawing.Color.White;
             this.btn_vendor.Image = ((System.Drawing.Image)(resources.GetObject("btn_vendor.Image")));
             this.btn_vendor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_vendor.Location = new System.Drawing.Point(3, 81);
+            this.btn_vendor.Location = new System.Drawing.Point(3, 83);
             this.btn_vendor.Name = "btn_vendor";
-            this.btn_vendor.Size = new System.Drawing.Size(257, 33);
+            this.btn_vendor.Size = new System.Drawing.Size(257, 34);
             this.btn_vendor.TabIndex = 14;
-            this.btn_vendor.Text = "   Vendor";
+            this.btn_vendor.Text = "   Vendor     [F2]";
             this.btn_vendor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_vendor.UseVisualStyleBackColor = true;
             this.btn_vendor.Click += new System.EventHandler(this.btn_vendor_Click);
@@ -231,11 +232,11 @@
             this.btn_manage_products.ForeColor = System.Drawing.Color.White;
             this.btn_manage_products.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_products.Image")));
             this.btn_manage_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_products.Location = new System.Drawing.Point(3, 42);
+            this.btn_manage_products.Location = new System.Drawing.Point(3, 43);
             this.btn_manage_products.Name = "btn_manage_products";
-            this.btn_manage_products.Size = new System.Drawing.Size(257, 33);
+            this.btn_manage_products.Size = new System.Drawing.Size(257, 34);
             this.btn_manage_products.TabIndex = 5;
-            this.btn_manage_products.Text = "   Manage Product";
+            this.btn_manage_products.Text = "   Manage Product     [F1]";
             this.btn_manage_products.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_manage_products.UseVisualStyleBackColor = true;
             this.btn_manage_products.Click += new System.EventHandler(this.btn_manage_products_Click);
@@ -248,11 +249,11 @@
             this.btn_records.ForeColor = System.Drawing.Color.White;
             this.btn_records.Image = ((System.Drawing.Image)(resources.GetObject("btn_records.Image")));
             this.btn_records.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_records.Location = new System.Drawing.Point(3, 276);
+            this.btn_records.Location = new System.Drawing.Point(3, 283);
             this.btn_records.Name = "btn_records";
-            this.btn_records.Size = new System.Drawing.Size(257, 33);
+            this.btn_records.Size = new System.Drawing.Size(257, 34);
             this.btn_records.TabIndex = 8;
-            this.btn_records.Text = "   Records";
+            this.btn_records.Text = "   Records     [F7]";
             this.btn_records.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_records.UseVisualStyleBackColor = true;
             this.btn_records.Click += new System.EventHandler(this.btn_records_Click);
@@ -265,11 +266,11 @@
             this.btn_stocks.ForeColor = System.Drawing.Color.White;
             this.btn_stocks.Image = ((System.Drawing.Image)(resources.GetObject("btn_stocks.Image")));
             this.btn_stocks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_stocks.Location = new System.Drawing.Point(3, 120);
+            this.btn_stocks.Location = new System.Drawing.Point(3, 123);
             this.btn_stocks.Name = "btn_stocks";
-            this.btn_stocks.Size = new System.Drawing.Size(257, 33);
+            this.btn_stocks.Size = new System.Drawing.Size(257, 34);
             this.btn_stocks.TabIndex = 11;
-            this.btn_stocks.Text = "   Stock Entry";
+            this.btn_stocks.Text = "   Stock Entry     [F3]";
             this.btn_stocks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_stocks.UseVisualStyleBackColor = true;
             this.btn_stocks.Click += new System.EventHandler(this.btn_stocks_Click);
@@ -282,11 +283,11 @@
             this.btn_category.ForeColor = System.Drawing.Color.White;
             this.btn_category.Image = ((System.Drawing.Image)(resources.GetObject("btn_category.Image")));
             this.btn_category.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_category.Location = new System.Drawing.Point(3, 198);
+            this.btn_category.Location = new System.Drawing.Point(3, 203);
             this.btn_category.Name = "btn_category";
-            this.btn_category.Size = new System.Drawing.Size(257, 33);
+            this.btn_category.Size = new System.Drawing.Size(257, 34);
             this.btn_category.TabIndex = 6;
-            this.btn_category.Text = "   Manage Category";
+            this.btn_category.Text = "   Manage Category     [F5]";
             this.btn_category.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_category.UseVisualStyleBackColor = true;
             this.btn_category.Click += new System.EventHandler(this.btn_category_Click);
@@ -299,11 +300,11 @@
             this.btn_brand.ForeColor = System.Drawing.Color.White;
             this.btn_brand.Image = ((System.Drawing.Image)(resources.GetObject("btn_brand.Image")));
             this.btn_brand.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_brand.Location = new System.Drawing.Point(3, 237);
+            this.btn_brand.Location = new System.Drawing.Point(3, 243);
             this.btn_brand.Name = "btn_brand";
-            this.btn_brand.Size = new System.Drawing.Size(257, 33);
+            this.btn_brand.Size = new System.Drawing.Size(257, 34);
             this.btn_brand.TabIndex = 7;
-            this.btn_brand.Text = "   Manage Brand";
+            this.btn_brand.Text = "   Manage Brand     [F6]";
             this.btn_brand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_brand.UseVisualStyleBackColor = true;
             this.btn_brand.Click += new System.EventHandler(this.btn_brand_Click);
@@ -316,38 +317,53 @@
             this.btn_customer.ForeColor = System.Drawing.Color.White;
             this.btn_customer.Image = ((System.Drawing.Image)(resources.GetObject("btn_customer.Image")));
             this.btn_customer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_customer.Location = new System.Drawing.Point(3, 432);
+            this.btn_customer.Location = new System.Drawing.Point(3, 443);
             this.btn_customer.Name = "btn_customer";
             this.btn_customer.Size = new System.Drawing.Size(257, 33);
             this.btn_customer.TabIndex = 16;
-            this.btn_customer.Text = "   Customers";
+            this.btn_customer.Text = "   Customers     [F11]";
             this.btn_customer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_customer.UseVisualStyleBackColor = true;
             this.btn_customer.Click += new System.EventHandler(this.btn_customer_Click);
+            // 
+            // btn_demands
+            // 
+            this.btn_demands.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_demands.FlatAppearance.BorderSize = 0;
+            this.btn_demands.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_demands.ForeColor = System.Drawing.Color.White;
+            this.btn_demands.Image = ((System.Drawing.Image)(resources.GetObject("btn_demands.Image")));
+            this.btn_demands.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_demands.Location = new System.Drawing.Point(3, 482);
+            this.btn_demands.Name = "btn_demands";
+            this.btn_demands.Size = new System.Drawing.Size(257, 35);
+            this.btn_demands.TabIndex = 17;
+            this.btn_demands.Text = "   Demands     [F12]";
+            this.btn_demands.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_demands.UseVisualStyleBackColor = true;
+            this.btn_demands.Click += new System.EventHandler(this.btn_demands_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 676);
+            this.panel2.Location = new System.Drawing.Point(0, 682);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(263, 100);
+            this.panel2.Size = new System.Drawing.Size(263, 94);
             this.panel2.TabIndex = 15;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.btn_logout, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(263, 100);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(263, 94);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btn_logout
@@ -358,9 +374,9 @@
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(3, 53);
+            this.btn_logout.Location = new System.Drawing.Point(3, 44);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(257, 44);
+            this.btn_logout.Size = new System.Drawing.Size(257, 47);
             this.btn_logout.TabIndex = 10;
             this.btn_logout.Text = "   Logout";
             this.btn_logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -483,6 +499,7 @@
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button btn_dashboard;
         private System.Windows.Forms.Button btn_customer;
+        private System.Windows.Forms.Button btn_demands;
     }
 }
 

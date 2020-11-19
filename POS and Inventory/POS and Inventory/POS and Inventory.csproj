@@ -124,6 +124,12 @@
     <Reference Include="Tulpep.NotificationWindow, Version=1.1.31.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tulpep.NotificationWindow.1.1.31\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
     </Reference>
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.cs">
@@ -211,6 +217,12 @@
     </Compile>
     <Compile Include="Form_dashboard.Designer.cs">
       <DependentUpon>Form_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Demand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Demand.Designer.cs">
+      <DependentUpon>Form_Demand.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_discount.cs">
       <SubType>Form</SubType>
@@ -344,6 +356,7 @@
     <Compile Include="Form_voidby.Designer.cs">
       <DependentUpon>Form_voidby.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalReportExtensions.cs" />
     <Compile Include="mydatabase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -413,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_dashboard.resx">
       <DependentUpon>Form_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Demand.resx">
+      <DependentUpon>Form_Demand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_discount.resx">
       <DependentUpon>Form_discount.cs</DependentUpon>

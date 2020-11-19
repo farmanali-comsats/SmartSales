@@ -36,7 +36,7 @@ namespace POS_and_Inventory
                 dataGridView1.Rows.Clear();
                 int i = 0;
                 con.Open();
-                if (cb_sortby.Text =="Sort By Quantity")
+                if (cb_sortby.Text == "Sort By Quantity")
                 {
                     cm = new SqlCommand("select top 10 pcode, pdesc, isnull(sum(qty),0) as qty,isnull(sum(total),0) as total from View_Solditems where sdate between '" + dttop1.Value.ToString("yyyy-MM-dd") + "' and '" + dttop2.Value.ToString("yyyy-MM-dd") + "' and status like 'Sold' group by pcode, pdesc order by qty desc", con);
                 }
@@ -49,7 +49,7 @@ namespace POS_and_Inventory
                 while (dr.Read())
                 {
                     i++;
-                    dataGridView1.Rows.Add(i,dr["pcode"].ToString(), dr["pdesc"].ToString(), dr["qty"].ToString(),double.Parse(dr["total"].ToString()).ToString("#,##0.00"));
+                    dataGridView1.Rows.Add(i, dr["pcode"].ToString(), dr["pdesc"].ToString(), dr["qty"].ToString(), double.Parse(dr["total"].ToString()).ToString("#,##0.00"));
                 }
                 dr.Close();
                 con.Close();
@@ -73,7 +73,7 @@ namespace POS_and_Inventory
                 while (dr.Read())
                 {
                     i++;
-                    dataGridView3.Rows.Add(i,dr[0].ToString(),dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
+                    dataGridView3.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
                 }
                 dr.Close();
                 con.Close();
@@ -81,7 +81,7 @@ namespace POS_and_Inventory
             catch (Exception ex)
             {
                 con.Close();
-                MessageBox.Show(ex.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void loadinventorylist()
@@ -159,67 +159,67 @@ namespace POS_and_Inventory
         {
             if (dataGridView4.Rows.Count > 0)
             {
-Form_InventoryReport frm = new Form_InventoryReport(this);
-            frm.loadinventoryreport();
-            frm.ShowDialog();
+                Form_InventoryReport frm = new Form_InventoryReport(this);
+                frm.loadinventoryreport();
+                frm.ShowDialog();
             }
-            
+
         }
 
         private void btn_printcritical_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (dataGridView3.Rows.Count > 0)
             {
-Form_InventoryReport frm = new Form_InventoryReport(this);
-            frm.loadcritical();
-            frm.ShowDialog();
+                Form_InventoryReport frm = new Form_InventoryReport(this);
+                frm.loadcritical();
+                frm.ShowDialog();
             }
-            
+
         }
 
         private void btn_printtop_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (dataGridView1.Rows.Count > 0)
             {
-Form_InventoryReport form = new Form_InventoryReport(this);
-            form.loadtopreport();
-            form.ShowDialog();
+                Form_InventoryReport form = new Form_InventoryReport(this);
+                form.loadtopreport();
+                form.ShowDialog();
             }
-            
+
         }
 
         private void btn_printsold_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+
             if (dataGridView2.Rows.Count > 0)
             {
- Form_InventoryReport form = new Form_InventoryReport(this);
-            form.loadsoldreport();
-            form.ShowDialog();
+                Form_InventoryReport form = new Form_InventoryReport(this);
+                form.loadsoldreport();
+                form.ShowDialog();
             }
-           
+
         }
 
         private void btn_printcancelled_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (dataGridView5.Rows.Count > 0)
             {
-            Form_InventoryReport frm = new Form_InventoryReport(this);
-            frm.loadcancelled();
-            frm.ShowDialog();
+                Form_InventoryReport frm = new Form_InventoryReport(this);
+                frm.loadcancelled();
+                frm.ShowDialog();
             }
-            
+
         }
 
         private void btn_printstockin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (dataGridView6.Rows.Count>0)
+            if (dataGridView6.Rows.Count > 0)
             {
-            Form_InventoryReport frm = new Form_InventoryReport(this);
-            frm.loadstocksinhistory();
-            frm.ShowDialog();
+                Form_InventoryReport frm = new Form_InventoryReport(this);
+                frm.loadstocksinhistory();
+                frm.ShowDialog();
             }
-            
+
         }
 
         private void cb_sortby_KeyPress(object sender, KeyPressEventArgs e)
@@ -229,9 +229,9 @@ Form_InventoryReport form = new Form_InventoryReport(this);
 
         private void llbl_load_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (cb_sortby.Text =="")
+            if (cb_sortby.Text == "")
             {
-                MessageBox.Show("Please select an option from the Dropdown list","Warning",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please select an option from the Dropdown list", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             loadrecords();
@@ -250,7 +250,7 @@ Form_InventoryReport form = new Form_InventoryReport(this);
             }
 
             DataSet ds = new DataSet();
-            da.Fill(ds,"Topselling");
+            da.Fill(ds, "Topselling");
             chart1.DataSource = ds.Tables["Topselling"];
             Series series = chart1.Series[0];
             series.ChartType = SeriesChartType.Doughnut;
@@ -268,14 +268,14 @@ Form_InventoryReport form = new Form_InventoryReport(this);
 
         private void llbl_soldchart_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (dataGridView2.Rows.Count>0)
+            if (dataGridView2.Rows.Count > 0)
             {
-            Form_solditemschart form = new Form_solditemschart(this);
-            form.lbl_title.Text = "Sold Items[" + dts1.Value.ToShortDateString() + " - " + dts2.Value.ToShortDateString() + "]";
-            form.loadsolitemschart();
-            form.ShowDialog();
+                Form_solditemschart form = new Form_solditemschart(this);
+                form.lbl_title.Text = "Sold Items[" + dts1.Value.ToShortDateString() + " - " + dts2.Value.ToShortDateString() + "]";
+                form.loadsolitemschart();
+                form.ShowDialog();
             }
-           
+
         }
 
         private void llbl_loadcancelled_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -326,7 +326,7 @@ Form_InventoryReport form = new Form_InventoryReport(this);
                     quantity = double.Parse(dr["quantity"].ToString());
                     equity += (cost * quantity);
                 }
-                
+
                 con.Close();
                 lbl_equity.Text = equity.ToString("#,##0.00");
             }
@@ -410,6 +410,16 @@ Form_InventoryReport form = new Form_InventoryReport(this);
                 con.Close();
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            //if (dataGridView3.Rows.Count > 0)
+            //{
+            //    Form_InventoryReport frm = new Form_InventoryReport(this);
+            //    frm.loadcritical();
+            //    //frm.ShowDialog();
+            //}
         }
     }
 }
