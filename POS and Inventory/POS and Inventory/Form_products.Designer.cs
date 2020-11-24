@@ -154,6 +154,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -236,7 +238,6 @@
             // 
             this.Column_description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column_description.HeaderText = "Description";
-            this.Column_description.MinimumWidth = 150;
             this.Column_description.Name = "Column_description";
             this.Column_description.ReadOnly = true;
             // 
@@ -290,10 +291,10 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.vid.DefaultCellStyle = dataGridViewCellStyle4;
             this.vid.HeaderText = "Vendor";
-            this.vid.MinimumWidth = 75;
             this.vid.Name = "vid";
             this.vid.ReadOnly = true;
-            this.vid.Width = 75;
+            this.vid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.vid.Width = 73;
             // 
             // EDIT
             // 

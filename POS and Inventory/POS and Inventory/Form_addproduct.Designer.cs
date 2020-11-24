@@ -251,6 +251,7 @@
             this.tft_barcode.Name = "tft_barcode";
             this.tft_barcode.Size = new System.Drawing.Size(181, 25);
             this.tft_barcode.TabIndex = 2;
+            this.tft_barcode.TextChanged += new System.EventHandler(this.tft_barcode_TextChanged);
             // 
             // tft_reorder
             // 
@@ -376,7 +377,7 @@
             this.cb_vendor.Name = "cb_vendor";
             this.cb_vendor.Size = new System.Drawing.Size(196, 25);
             this.cb_vendor.TabIndex = 12;
-            this.cb_vendor.TextChanged += new System.EventHandler(this.cmb_vendor_TextChanged);
+            this.cb_vendor.TextChanged += new System.EventHandler(this.cb_vendor_TextChanged);
             // 
             // lbl_vid
             // 

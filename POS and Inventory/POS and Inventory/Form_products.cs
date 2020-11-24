@@ -42,7 +42,7 @@ namespace POS_and_Inventory
                 int i = 0;
                 dataGridView1.Rows.Clear();
                 con.Open();
-                cm = new SqlCommand("select p.pcode, p.barcode, p.pname, p.pdesc, b.brand, c.category,p.cost, p.price, p.reorder, v.vendor from table_products as p inner join table_brands as b on b.id = p.bid inner join table_category as c on c.id = p.cid inner join table_vendor as v on v.id = p.vid where p.pname like '" + tft_search.Text + "%' or p.pdesc like '" + tft_search.Text + "%'", con);
+                cm = new SqlCommand("select p.pcode, p.barcode, p.pname, p.pdesc, b.brand, c.category,p.cost, p.price, p.reorder, v.vendor from table_products as p inner join table_brands as b on b.id = p.bid inner join table_category as c on c.id = p.cid inner join table_vendor as v on v.id = p.vid where (p.pname like '%" + tft_search.Text + "%' or p.pdesc like '%" + tft_search.Text + "%' or p.barcode like '" + tft_search.Text + "%' or v.vendor like '" + tft_search.Text + "%' or b.brand like '" + tft_search.Text + "%' or c.category like '" + tft_search.Text + "%')", con);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
@@ -69,8 +69,9 @@ namespace POS_and_Inventory
         {
             try
             {
-                String vn = "";
+                string vname = string.Empty;
                 String colname = dataGridView1.Columns[e.ColumnIndex].Name;
+                int ri;
                 if (colname == "EDIT")
                 {
                     Form_addproduct myform = new Form_addproduct(this);
@@ -87,37 +88,12 @@ namespace POS_and_Inventory
                     myform.tft_reorder.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
                     myform.cb_vendor.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
                     
-                    con.Open();
-                    cm = new SqlCommand("select vid from table_products where pcode like '" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                    dr = cm.ExecuteReader();
-                    dr.Read();
-                    if (dr.HasRows)
-                    {
-                        myform.lbl_vid.Text = dr["vid"].ToString();
-                        //cb_vname.Text = dr["contactperson"].ToString();
-                        //tft_address.Text = dr["address"].ToString();
-                    }
-                    dr.Close();
-                    con.Close();
-
-                    con.Open();
-                    cm = new SqlCommand("select contactperson from table_vendor where id like '" + myform.lbl_vid.Text + "'", con);
-                    dr = cm.ExecuteReader();
-                    dr.Read();
-                    if (dr.HasRows)
-                    {
-                        //myform.lbl_vid.Text = dr["vid"].ToString();
-                        //cb_vname.Text = dr["contactperson"].ToString();
-                        //tft_address.Text = dr["address"].ToString();
-                        vn = dr["contactperson"].ToString();
-                    }
-                    dr.Close();
-                    con.Close();
-
-                    myform.cb_vname.Text = vn;
-
+                    ri = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    
+                    vname = getvendor(ri);
+                    myform.cb_vname.Text = vname;
                     String bcodde = myform.tft_barcode.Text;
-                    String [] bcode;
+                    String[] bcode;
                     if (bcodde != String.Empty)
                     {
                         bcode = bcodde.Split(' ');
@@ -154,7 +130,7 @@ namespace POS_and_Inventory
                         loadrecords();
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -163,23 +139,62 @@ namespace POS_and_Inventory
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        public string getvendor(int val)
+        {
+            String vn = "";
+            try
+            {
+                
+                Form_addproduct myform = new Form_addproduct(this);
+                con.Open();
+                cm = new SqlCommand("select vid from table_products where pcode like '" + dataGridView1.Rows[val].Cells[1].Value.ToString() + "'", con);
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    myform.lbl_vid.Text = dr["vid"].ToString();
+                    //cb_vname.Text = dr["contactperson"].ToString();
+                    //tft_address.Text = dr["address"].ToString();
+                }
+                dr.Close();
+                con.Close();
 
+                con.Open();
+                cm = new SqlCommand("select contactperson from table_vendor where id like '" + myform.lbl_vid.Text + "'", con);
+                dr = cm.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    //myform.lbl_vid.Text = dr["vid"].ToString();
+                    //cb_vname.Text = dr["contactperson"].ToString();
+                    //tft_address.Text = dr["address"].ToString();
+                    vn  = dr["contactperson"].ToString();
+                    //MessageBox.Show(myform.cb_vname.Text);
+                }
+                dr.Close();
+                con.Close();
+
+                //myform.cb_vname.Text = vn;
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                dr.Close();
+                MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return vn;
+        }
         private void Form_products_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Insert)
             {
-                this.Dispose();
-            }
-
-            if (e.KeyCode == Keys.F9)
-            {
-                picbox_addproduct_Click(sender,e);
+                picbox_addproduct_Click(sender, e);
             }
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F9)
+            if (e.KeyCode == Keys.Insert)
             {
                 picbox_addproduct_Click(sender, e);
             }
@@ -187,7 +202,7 @@ namespace POS_and_Inventory
 
         private void tft_search_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F9)
+            if (e.KeyCode == Keys.Insert)
             {
                 picbox_addproduct_Click(sender, e);
             }

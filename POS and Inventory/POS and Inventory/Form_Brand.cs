@@ -89,6 +89,10 @@ namespace POS_and_Inventory
             {
                 picbox_addbrand_Click(sender, e);
             }
+            else if (e.KeyCode == Keys.Insert)
+            {
+                picbox_addbrand_Click(sender, e);
+            }
         }
     }
 }

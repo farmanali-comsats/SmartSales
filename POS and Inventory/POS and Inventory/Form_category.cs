@@ -90,6 +90,10 @@ namespace POS_and_Inventory
             {
                 picbox_addcategory_Click(sender, e);
             }
+            else if (e.KeyCode == Keys.Insert)
+            {
+                picbox_addcategory_Click(sender, e);
+            }
         }
     }
 }

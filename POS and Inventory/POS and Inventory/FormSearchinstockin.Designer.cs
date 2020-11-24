@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearchinstockin));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chb_bcode = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tft_bcode = new MetroFramework.Controls.MetroTextBox();
             this.tft_search = new MetroFramework.Controls.MetroTextBox();
             this.picbox_cancel = new System.Windows.Forms.PictureBox();
             this.lbl_stokintitle = new System.Windows.Forms.Label();
@@ -41,10 +45,10 @@
             this.p_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vendor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Select = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tft_bcode = new MetroFramework.Controls.MetroTextBox();
-            this.chb_bcode = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_cancel)).BeginInit();
@@ -61,17 +65,66 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(679, 40);
+            this.panel1.Size = new System.Drawing.Size(1079, 40);
             this.panel1.TabIndex = 3;
+            // 
+            // chb_bcode
+            // 
+            this.chb_bcode.AutoSize = true;
+            this.chb_bcode.Checked = true;
+            this.chb_bcode.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chb_bcode.Location = new System.Drawing.Point(602, 10);
+            this.chb_bcode.Name = "chb_bcode";
+            this.chb_bcode.Size = new System.Drawing.Size(75, 21);
+            this.chb_bcode.TabIndex = 8;
+            this.chb_bcode.Text = "Barcode";
+            this.chb_bcode.UseVisualStyleBackColor = true;
+            this.chb_bcode.CheckedChanged += new System.EventHandler(this.chb_bcode_CheckedChanged);
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.tft_bcode);
             this.panel2.Controls.Add(this.tft_search);
-            this.panel2.Location = new System.Drawing.Point(283, 2);
+            this.panel2.Location = new System.Drawing.Point(683, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(359, 32);
             this.panel2.TabIndex = 7;
+            // 
+            // tft_bcode
+            // 
+            // 
+            // 
+            // 
+            this.tft_bcode.CustomButton.Image = null;
+            this.tft_bcode.CustomButton.Location = new System.Drawing.Point(329, 1);
+            this.tft_bcode.CustomButton.Name = "";
+            this.tft_bcode.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.tft_bcode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tft_bcode.CustomButton.TabIndex = 1;
+            this.tft_bcode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tft_bcode.CustomButton.UseSelectable = true;
+            this.tft_bcode.CustomButton.Visible = false;
+            this.tft_bcode.DisplayIcon = true;
+            this.tft_bcode.Icon = ((System.Drawing.Image)(resources.GetObject("tft_bcode.Icon")));
+            this.tft_bcode.Lines = new string[0];
+            this.tft_bcode.Location = new System.Drawing.Point(3, 3);
+            this.tft_bcode.MaxLength = 32767;
+            this.tft_bcode.Name = "tft_bcode";
+            this.tft_bcode.PasswordChar = '\0';
+            this.tft_bcode.PromptText = "Search By Barcode Here";
+            this.tft_bcode.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tft_bcode.SelectedText = "";
+            this.tft_bcode.SelectionLength = 0;
+            this.tft_bcode.SelectionStart = 0;
+            this.tft_bcode.ShortcutsEnabled = true;
+            this.tft_bcode.Size = new System.Drawing.Size(353, 25);
+            this.tft_bcode.TabIndex = 1;
+            this.tft_bcode.UseSelectable = true;
+            this.tft_bcode.WaterMark = "Search By Barcode Here";
+            this.tft_bcode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tft_bcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tft_bcode.TextChanged += new System.EventHandler(this.tft_bcode_TextChanged);
             // 
             // tft_search
             // 
@@ -114,7 +167,7 @@
             // 
             this.picbox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picbox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("picbox_cancel.Image")));
-            this.picbox_cancel.Location = new System.Drawing.Point(648, 3);
+            this.picbox_cancel.Location = new System.Drawing.Point(1048, 3);
             this.picbox_cancel.Name = "picbox_cancel";
             this.picbox_cancel.Size = new System.Drawing.Size(25, 28);
             this.picbox_cancel.TabIndex = 2;
@@ -151,16 +204,18 @@
             this.p_code,
             this.Column_name,
             this.Column_description,
+            this.Category,
             this.Column_qty,
+            this.Vendor,
             this.Select});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 40);
@@ -168,7 +223,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(679, 548);
+            this.dataGridView1.Size = new System.Drawing.Size(1079, 645);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -183,10 +238,10 @@
             // p_code
             // 
             this.p_code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.p_code.HeaderText = "Product Code";
+            this.p_code.HeaderText = "PCode";
             this.p_code.Name = "p_code";
             this.p_code.ReadOnly = true;
-            this.p_code.Width = 111;
+            this.p_code.Width = 69;
             // 
             // Column_name
             // 
@@ -203,6 +258,16 @@
             this.Column_description.Name = "Column_description";
             this.Column_description.ReadOnly = true;
             // 
+            // Category
+            // 
+            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Category.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            this.Category.Width = 84;
+            // 
             // Column_qty
             // 
             this.Column_qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -210,6 +275,16 @@
             this.Column_qty.Name = "Column_qty";
             this.Column_qty.ReadOnly = true;
             this.Column_qty.Width = 79;
+            // 
+            // Vendor
+            // 
+            this.Vendor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Vendor.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Vendor.HeaderText = "Vendor";
+            this.Vendor.Name = "Vendor";
+            this.Vendor.ReadOnly = true;
+            this.Vendor.Width = 73;
             // 
             // Select
             // 
@@ -222,60 +297,12 @@
             this.Select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Select.Width = 17;
             // 
-            // tft_bcode
-            // 
-            // 
-            // 
-            // 
-            this.tft_bcode.CustomButton.Image = null;
-            this.tft_bcode.CustomButton.Location = new System.Drawing.Point(329, 1);
-            this.tft_bcode.CustomButton.Name = "";
-            this.tft_bcode.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.tft_bcode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tft_bcode.CustomButton.TabIndex = 1;
-            this.tft_bcode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tft_bcode.CustomButton.UseSelectable = true;
-            this.tft_bcode.CustomButton.Visible = false;
-            this.tft_bcode.DisplayIcon = true;
-            this.tft_bcode.Icon = ((System.Drawing.Image)(resources.GetObject("tft_bcode.Icon")));
-            this.tft_bcode.Lines = new string[0];
-            this.tft_bcode.Location = new System.Drawing.Point(3, 3);
-            this.tft_bcode.MaxLength = 32767;
-            this.tft_bcode.Name = "tft_bcode";
-            this.tft_bcode.PasswordChar = '\0';
-            this.tft_bcode.PromptText = "Search By Barcode Here";
-            this.tft_bcode.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tft_bcode.SelectedText = "";
-            this.tft_bcode.SelectionLength = 0;
-            this.tft_bcode.SelectionStart = 0;
-            this.tft_bcode.ShortcutsEnabled = true;
-            this.tft_bcode.Size = new System.Drawing.Size(353, 25);
-            this.tft_bcode.TabIndex = 1;
-            this.tft_bcode.UseSelectable = true;
-            this.tft_bcode.WaterMark = "Search By Barcode Here";
-            this.tft_bcode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tft_bcode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tft_bcode.TextChanged += new System.EventHandler(this.tft_bcode_TextChanged);
-            // 
-            // chb_bcode
-            // 
-            this.chb_bcode.AutoSize = true;
-            this.chb_bcode.Checked = true;
-            this.chb_bcode.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chb_bcode.Location = new System.Drawing.Point(190, 9);
-            this.chb_bcode.Name = "chb_bcode";
-            this.chb_bcode.Size = new System.Drawing.Size(75, 21);
-            this.chb_bcode.TabIndex = 8;
-            this.chb_bcode.Text = "Barcode";
-            this.chb_bcode.UseVisualStyleBackColor = true;
-            this.chb_bcode.CheckedChanged += new System.EventHandler(this.chb_bcode_CheckedChanged);
-            // 
             // FormSearchinstockin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(679, 588);
+            this.ClientSize = new System.Drawing.Size(1079, 685);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -302,13 +329,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroTextBox tft_search;
+        private System.Windows.Forms.CheckBox chb_bcode;
+        private MetroFramework.Controls.MetroTextBox tft_bcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn SNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn p_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vendor;
         private System.Windows.Forms.DataGridViewImageColumn Select;
-        private System.Windows.Forms.CheckBox chb_bcode;
-        private MetroFramework.Controls.MetroTextBox tft_bcode;
     }
 }

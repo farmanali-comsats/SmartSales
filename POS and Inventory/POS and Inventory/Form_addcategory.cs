@@ -89,7 +89,7 @@ namespace POS_and_Inventory
                 {
                     con.Open();
                     cm = new SqlCommand("update table_category set category = @category where id like'" + lblid.Text + "'", con);
-                    cm.Parameters.AddWithValue("@brand", tft_categoryname.Text);
+                    cm.Parameters.AddWithValue("@category", tft_categoryname.Text);
                     cm.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Category has been updated Successfully");
@@ -118,7 +118,14 @@ namespace POS_and_Inventory
             }
             if (e.KeyCode == Keys.Enter)
             {
-                btn_save_Click(sender, e);
+                if (btn_save.Enabled == true)
+                {
+                    btn_save_Click(sender, e);
+                }
+                else
+                {
+                    btn_update_Click(sender, e);
+                }
             }
         }
     }

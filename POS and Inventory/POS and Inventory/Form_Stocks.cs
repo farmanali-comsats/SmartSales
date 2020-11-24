@@ -23,6 +23,7 @@ namespace POS_and_Inventory
             InitializeComponent();
             con = new SqlConnection(db.MyConnection());
             loadvendor();
+            this.KeyPreview = true;
         }
 
         public void loadstockin()
@@ -35,7 +36,7 @@ namespace POS_and_Inventory
             while (dr.Read())
             {
                 i++;
-                dataGridView2.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr["vendor"].ToString());
+                dataGridView2.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr["vendor"].ToString());
             }
             dr.Close();
             con.Close();
@@ -50,7 +51,7 @@ namespace POS_and_Inventory
             while (dr.Read())
             {
                 i++;
-                dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), DateTime.Parse(dr[5].ToString()).ToString("yyyy-MM-dd"), dr[6].ToString(), dr["vendor"].ToString());
+                dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), DateTime.Parse(dr[6].ToString()).ToString("yyyy-MM-dd"), dr[7].ToString(), dr["vendor"].ToString());
             }
             dr.Close();
             con.Close();
@@ -114,13 +115,13 @@ namespace POS_and_Inventory
                         {
                             //update table products
                             con.Open();
-                            cm = new SqlCommand("update table_products set quantity = quantity +" + int.Parse(dataGridView2.Rows[i].Cells[5].Value.ToString()) + " where pcode like '" + dataGridView2.Rows[i].Cells[3].Value.ToString() + "'", con);
+                            cm = new SqlCommand("update table_products set quantity = quantity +" + int.Parse(dataGridView2.Rows[i].Cells[6].Value.ToString()) + " where pcode like '" + dataGridView2.Rows[i].Cells[3].Value.ToString() + "'", con);
                             cm.ExecuteNonQuery();
                             con.Close();
 
                             //update table stockin
                             con.Open();
-                            cm = new SqlCommand("update table_stockin set qty = qty +" + int.Parse(dataGridView2.Rows[i].Cells[5].Value.ToString()) + ",status = 'Done' where id like'" + dataGridView2.Rows[i].Cells[1].Value.ToString() + "'", con);
+                            cm = new SqlCommand("update table_stockin set qty = qty +" + int.Parse(dataGridView2.Rows[i].Cells[6].Value.ToString()) + ",status = 'Done' where id like'" + dataGridView2.Rows[i].Cells[1].Value.ToString() + "'", con);
                             cm.ExecuteNonQuery();
                             con.Close();
                         }
@@ -143,7 +144,7 @@ namespace POS_and_Inventory
             {
                 cb_vendor.Items.Clear();
                 con.Open();
-                cm = new SqlCommand("select * from table_vendor", con);
+                cm = new SqlCommand("select * from table_vendor order by vendor", con);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
@@ -185,7 +186,7 @@ namespace POS_and_Inventory
                 tft_address.Text = "";
                 cb_vname.Items.Clear();
                 con.Open();
-                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "'", con);
+                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "'order by contactperson", con);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
@@ -202,7 +203,7 @@ namespace POS_and_Inventory
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        {            
             Random rn = new Random();
             tft_referenceno.Clear();
             tft_referenceno.Text += rn.Next();

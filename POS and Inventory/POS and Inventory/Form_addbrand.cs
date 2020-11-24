@@ -111,7 +111,15 @@ namespace POS_and_Inventory
             
             if (e.KeyCode == Keys.Enter)
             {
-                btn_save_Click(sender, e);
+                if (btn_save.Enabled == true)
+                {
+                    btn_save_Click(sender, e);
+                }
+                else
+                {
+                    btn_update_Click(sender,e);
+                }
+                
             }
         }
     }

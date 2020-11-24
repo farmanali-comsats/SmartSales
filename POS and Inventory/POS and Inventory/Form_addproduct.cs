@@ -24,6 +24,7 @@ namespace POS_and_Inventory
         SqlDataReader dr;
         Form_products formproduct;
         String stitle = "Smart Sales System";
+        static bool ch = true;
         public Form_addproduct(Form_products frm)
         {
             InitializeComponent();
@@ -88,7 +89,7 @@ namespace POS_and_Inventory
             //loadproductcode();
             loadbrand();
             loadcategory();
-            loadvendor();            
+            loadvendor();
         }
         public void loadproductcode()
         {
@@ -157,94 +158,111 @@ namespace POS_and_Inventory
             try
             {
                 byte[] pic = null;
-                MemoryStream mem ;
-                if (tft_pname.Text!=string.Empty&& tft_pdescription.Text != string.Empty && tft_cost.Text != string.Empty && tft_price.Text != string.Empty&& cb_brand.Text!=""&&cb_category.Text!=""&& cb_vendor.Text!="" && cb_vname.Text != "") {
-                    if (MessageBox.Show("Confirm to Save this Product", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MemoryStream mem;
+                if (tft_pname.Text != string.Empty && tft_pdescription.Text != string.Empty && tft_cost.Text != string.Empty && tft_price.Text != string.Empty && cb_brand.Text != "" && cb_category.Text != "" && cb_vendor.Text != "" && cb_vname.Text != "")
+                {
+                    if (bcodecheck(tft_barcode.Text.Trim().ToLower()))
                     {
-                        if (pictureBox_barcode.Image!=null) {
-                            mem = new MemoryStream();
-                            pictureBox_barcode.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
-                            pic = mem.ToArray();                                                        
-                        }
-
-                        String bid = "", cid = "";
-                        con.Open();
-                        cm = new SqlCommand("Select id from table_brands where brand like '" + cb_brand.Text + "'", con);
-                        dr = cm.ExecuteReader();
-                        dr.Read();
-                        if (dr.HasRows) {
-                            bid = dr[0].ToString();
-                        }
-                        dr.Close();
-                        con.Close();
-
-                        con.Open();
-                        cm = new SqlCommand("Select id from table_category where category like '" + cb_category.Text + "'", con);
-                        dr = cm.ExecuteReader();
-                        dr.Read();
-                        if (dr.HasRows) {
-                            cid = dr[0].ToString();
-                        }
-                        dr.Close();
-                        con.Close();
-
-                        con.Open();
-                        if (pictureBox_barcode.Image!=null) {
-                            cm = new SqlCommand("INSERT INTo table_products(pcode,barcode, pname, pdesc,bid,cid,cost, price,reorder,barcode_image,vid)VALUEs(@pcode,@barcode, @pname, @pdesc,@bid,@cid,@cost,@price,@reorder,@barcode_image,@vid)", con);
-                        } else {
-                            cm = new SqlCommand("INSERT INTo table_products(pcode,barcode, pname, pdesc,bid,cid,cost, price,reorder,vid)VALUEs(@pcode,@barcode, @pname, @pdesc,@bid,@cid,@cost,@price,@reorder,@vid)", con);
-                        }
-                        cm.Parameters.AddWithValue("@pcode", tft_pcode.Text);
-                        cm.Parameters.AddWithValue("@barcode", tft_barcode.Text.Trim());
-                        cm.Parameters.AddWithValue("@pname", tft_pname.Text);
-                        cm.Parameters.AddWithValue("@pdesc", tft_pdescription.Text);
-                        cm.Parameters.AddWithValue("@bid", bid);
-                        cm.Parameters.AddWithValue("@cid", cid);
-                        cm.Parameters.AddWithValue("@cost", Double.Parse(tft_cost.Text));
-                        cm.Parameters.AddWithValue("@price", Double.Parse(tft_price.Text));
-                        cm.Parameters.AddWithValue("@reorder", int.Parse(tft_reorder.Text));
-                        cm.Parameters.AddWithValue("@vid", int.Parse(lbl_vid.Text));
-
-                        if (pictureBox_barcode.Image!=null) { 
-                            cm.Parameters.AddWithValue("@barcode_image", pic);
-
-                            string strfn = Convert.ToString(Application.StartupPath + @"\\Barcodes\\SR " + tft_pcode.Text + ".png");
-                            if (File.Exists(strfn))
+                        MessageBox.Show("You are trying to add existing product again");
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Confirm to Save this Product", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            if (pictureBox_barcode.Image != null)
                             {
-                                FileStream fs = new FileStream(strfn, FileMode.Append, FileAccess.Write);
-                                fs.Write(pic, 0, pic.Length);
-                                fs.Flush();
-                                fs.Close();
+                                mem = new MemoryStream();
+                                pictureBox_barcode.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
+                                pic = mem.ToArray();
+                            }
+
+                            String bid = "", cid = "";
+                            con.Open();
+                            cm = new SqlCommand("Select id from table_brands where brand like '" + cb_brand.Text + "'", con);
+                            dr = cm.ExecuteReader();
+                            dr.Read();
+                            if (dr.HasRows)
+                            {
+                                bid = dr[0].ToString();
+                            }
+                            dr.Close();
+                            con.Close();
+
+                            con.Open();
+                            cm = new SqlCommand("Select id from table_category where category like '" + cb_category.Text + "'", con);
+                            dr = cm.ExecuteReader();
+                            dr.Read();
+                            if (dr.HasRows)
+                            {
+                                cid = dr[0].ToString();
+                            }
+                            dr.Close();
+                            con.Close();
+
+                            con.Open();
+                            if (pictureBox_barcode.Image != null)
+                            {
+                                cm = new SqlCommand("INSERT INTo table_products(pcode,barcode, pname, pdesc,bid,cid,cost, price,reorder,barcode_image,vid)VALUEs(@pcode,@barcode, @pname, @pdesc,@bid,@cid,@cost,@price,@reorder,@barcode_image,@vid)", con);
                             }
                             else
                             {
-                                FileStream fs = new FileStream(strfn, FileMode.CreateNew, FileAccess.Write);
-                                fs.Write(pic, 0, pic.Length);
-                                fs.Flush();
-                                fs.Close();
+                                cm = new SqlCommand("INSERT INTo table_products(pcode,barcode, pname, pdesc,bid,cid,cost, price,reorder,vid)VALUEs(@pcode,@barcode, @pname, @pdesc,@bid,@cid,@cost,@price,@reorder,@vid)", con);
                             }
-                            
-                        }
-                        else
-                        {
-                            //cm.Parameters.AddWithValue("@barcode_image", null);
-                        }
+                            cm.Parameters.AddWithValue("@pcode", tft_pcode.Text);
+                            cm.Parameters.AddWithValue("@barcode", tft_barcode.Text.Trim());
+                            cm.Parameters.AddWithValue("@pname", tft_pname.Text);
+                            cm.Parameters.AddWithValue("@pdesc", tft_pdescription.Text);
+                            cm.Parameters.AddWithValue("@bid", bid);
+                            cm.Parameters.AddWithValue("@cid", cid);
+                            cm.Parameters.AddWithValue("@cost", Double.Parse(tft_cost.Text));
+                            cm.Parameters.AddWithValue("@price", Double.Parse(tft_price.Text));
+                            cm.Parameters.AddWithValue("@reorder", int.Parse(tft_reorder.Text));
+                            cm.Parameters.AddWithValue("@vid", int.Parse(lbl_vid.Text));
 
-                        //saving barcodes locally
-                        
-                        
+                            if (pictureBox_barcode.Image != null)
+                            {
+                                cm.Parameters.AddWithValue("@barcode_image", pic);
 
-                        cm.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Product Saved Successfully");
-                        clear();
-                        formproduct.loadrecords();
+                                string strfn = Convert.ToString(Application.StartupPath + @"\Barcodes\SR-" + tft_pcode.Text + ".png");
+                                if (File.Exists(strfn))
+                                {
+                                    FileStream fs = new FileStream(strfn, FileMode.Append, FileAccess.Write);
+                                    fs.Write(pic, 0, pic.Length);
+                                    fs.Flush();
+                                    fs.Close();
+                                }
+                                else
+                                {
+                                    FileStream fs = new FileStream(strfn, FileMode.CreateNew, FileAccess.Write);
+                                    fs.Write(pic, 0, pic.Length);
+                                    fs.Flush();
+                                    fs.Close();
+                                }
+
+                            }
+                            else
+                            {
+                                //cm.Parameters.AddWithValue("@barcode_image", null);
+                            }
+
+                            //saving barcodes locally
+
+
+
+                            cm.ExecuteNonQuery();
+                            con.Close();
+                            MessageBox.Show("Product Saved Successfully");
+                            clear();
+                            formproduct.loadrecords();
+
+
+                        }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please Enter Required Information!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                } 
+                    MessageBox.Show("Please Enter Required Information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception ex)
             {
@@ -284,13 +302,15 @@ namespace POS_and_Inventory
 
         private void tft_price_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==8)
+            if (e.KeyChar == 8)
             {
 
-            }else if (e.KeyChar==46)
+            }
+            else if (e.KeyChar == 46)
             {
 
-            }else if ((e.KeyChar<48)||(e.KeyChar>57))
+            }
+            else if ((e.KeyChar < 48) || (e.KeyChar > 57))
             {
                 e.Handled = true;
             }
@@ -325,9 +345,9 @@ namespace POS_and_Inventory
                 {
                     btn_save_Click(sender, e);
                 }
-                if (btn_update.Enabled ==true)
+                if (btn_update.Enabled == true)
                 {
-                    btn_update_Click(sender,e);
+                    btn_update_Click(sender, e);
                 }
 
             }
@@ -338,7 +358,7 @@ namespace POS_and_Inventory
             {
                 byte[] pic = null;
                 MemoryStream mem;
-                if (tft_pname.Text != string.Empty && tft_pdescription.Text != string.Empty && tft_cost.Text != string.Empty && tft_price.Text != string.Empty && cb_brand.Text != "" && cb_category.Text != ""&&cb_vendor.Text!="" && cb_vname.Text != "")
+                if (tft_pname.Text != string.Empty && tft_pdescription.Text != string.Empty && tft_cost.Text != string.Empty && tft_price.Text != string.Empty && cb_brand.Text != "" && cb_category.Text != "" && cb_vendor.Text != "" && cb_vname.Text != "" && ch != false)
                 {
                     if (MessageBox.Show("Confirm to Update this Product", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -374,12 +394,13 @@ namespace POS_and_Inventory
                         con.Close();
 
                         con.Open();
-                        if (pictureBox_barcode.Image!=null) {
-                            cm = new SqlCommand("update table_products set pname=@pname, pdesc=@pdesc, bid=@bid, cid=@cid,cost=@cost, price=@price, reorder=@reorder, barcode_image=@barcode_image, vid=@vid where (pcode like @pcode)", con);
+                        if (pictureBox_barcode.Image != null)
+                        {
+                            cm = new SqlCommand("update table_products set  pname=@pname, pdesc=@pdesc, bid=@bid, cid=@cid,cost=@cost, price=@price, reorder=@reorder, barcode_image=@barcode_image, vid=@vid where (pcode like @pcode)", con);
                         }
                         else
                         {
-                            cm = new SqlCommand("update table_products set pname=@pname, pdesc=@pdesc, bid=@bid, cid=@cid,cost=@cost, price=@price, reorder=@reorder, vid= @vid where (pcode like @pcode)", con);
+                            cm = new SqlCommand("update table_products set barcode=@barcode, pname=@pname, pdesc=@pdesc, bid=@bid, cid=@cid,cost=@cost, price=@price, reorder=@reorder, vid= @vid where (pcode like @pcode)", con);
                         }
                         cm.Parameters.AddWithValue("@barcode", tft_barcode.Text);
                         cm.Parameters.AddWithValue("@pname", tft_pname.Text);
@@ -390,8 +411,9 @@ namespace POS_and_Inventory
                         cm.Parameters.AddWithValue("@price", Double.Parse(tft_price.Text));
                         cm.Parameters.AddWithValue("@reorder", int.Parse(tft_reorder.Text));
                         cm.Parameters.AddWithValue("@vid", int.Parse(lbl_vid.Text));
-                        if (pictureBox_barcode.Image!=null) { cm.Parameters.AddWithValue("@barcode_image", pic); } 
-                        else { //cm.Parameters.AddWithValue("@barcode_image", pic); 
+                        if (pictureBox_barcode.Image != null) { cm.Parameters.AddWithValue("@barcode_image", pic); }
+                        else
+                        { //cm.Parameters.AddWithValue("@barcode_image", pic); 
                         }
                         cm.Parameters.AddWithValue("@pcode", tft_pcode.Text);
                         cm.ExecuteNonQuery();
@@ -404,8 +426,9 @@ namespace POS_and_Inventory
                         //MemoryStream mem = new MemoryStream();
                         //pictureBox1.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
                         //pic = mem.ToArray();
-                        if (pictureBox_barcode.Image!=null) {
-                            string filename = "SR " +tft_pcode.Text;
+                        if (pictureBox_barcode.Image != null)
+                        {
+                            string filename = "SR " + tft_pcode.Text;
                             //string filepath = Application.StartupPath + @"\\Barcodes\\" + filename + ".png";
                             string strfn = Convert.ToString(Application.StartupPath + @"\\Barcodes\\" + filename + ".png");
 
@@ -425,19 +448,20 @@ namespace POS_and_Inventory
                                 fs.Flush();
                                 fs.Close();
                             }
-                            
+
                         }
 
                         if (rowsUpdated > 0) MessageBox.Show("Product Updated Successfully");
                         else MessageBox.Show("Product NOT Updated Successfully");
 
-                       
-                        //MessageBox.Show("Product Updated Successfully");
+
+                        //("Product Updated Successfully");
                         clear();
                         formproduct.loadrecords();
                         this.Dispose();
                     }
                 }
+
 
                 else
                 {
@@ -462,20 +486,20 @@ namespace POS_and_Inventory
                 price = cost + price;
 
                 double pricee = Math.Ceiling(price);
-                
+
                 tft_price.Text = pricee.ToString();
             }
             catch (Exception ex)
-            {                
+            {
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }       
+        }
 
         private void tft_cost_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if (tft_cost.Text!=String.Empty)
+                if (tft_cost.Text != String.Empty)
                 {
                     double cost = double.Parse(tft_cost.Text);
                     double percent = double.Parse(tft_percent.Text);
@@ -486,7 +510,7 @@ namespace POS_and_Inventory
 
                     tft_price.Text = pricee.ToString();
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -509,48 +533,25 @@ namespace POS_and_Inventory
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void cmb_vendor_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                cb_vname.Text = "";
-                cb_vname.Items.Clear();
-                con.Open();
-                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "'", con);
-                dr = cm.ExecuteReader();
-                while (dr.Read())
-                {
-                    cb_vname.Items.Add(dr["contactperson"].ToString());
-                }
-                dr.Close();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                con.Close();
-                dr.Close();
-                MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void cb_vname_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                con.Open();
-                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "' and contactperson like '" + cb_vname.Text + "'", con);
-                dr = cm.ExecuteReader();
-                dr.Read();
-                if (dr.HasRows)
-                {
-                    lbl_vid.Text = dr["id"].ToString();
-                    //cb_vname.Text = dr["contactperson"].ToString();
-                    //tft_address.Text = dr["address"].ToString();
-                }
-                dr.Close();
                 con.Close();
-            }
+               
+                    con.Open();
+                    cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "' and contactperson like '" + cb_vname.Text + "'", con);
+                    dr = cm.ExecuteReader();
+                    dr.Read();
+                    if (dr.HasRows)
+                    {
+                        lbl_vid.Text = dr["id"].ToString();
+                        //cb_vname.Text = dr["contactperson"].ToString();
+                        //tft_address.Text = dr["address"].ToString();
+                    }
+                    dr.Close();
+                    con.Close();
+                } 
             catch (Exception ex)
             {
                 con.Close();
@@ -572,6 +573,128 @@ namespace POS_and_Inventory
             if (e.KeyCode == Keys.F9)
             {
                 pb_category_Click(sender, e);
+            }
+        }
+
+        private void tft_barcode_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] asa = new string[10];
+                string bc = tft_barcode.Text.Trim().ToLower();
+                if (bcodecheck(bc))
+                {
+                    if (btn_save.Enabled == true)
+                    {
+                        if ((MessageBox.Show("Load product to form ?", "Existing Product Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                        {
+                            con.Open();
+                            cm = new SqlCommand("select pcode, pname, pdesc,b.brand,c.category,cost,price,reorder,v.vendor,v.contactperson from table_products as p inner join table_brands as b on b.id = p.bid inner join table_category as c on c.id = p.cid inner join table_vendor as v on v.id = p.vid where barcode like '" + bc + "'", con);
+                            dr = cm.ExecuteReader();
+                            while (dr.Read()) {
+                                
+                                if (dr.HasRows)
+                                {
+                                    tft_pcode.Text = dr["pcode"].ToString();
+                                    //tft_barcode.Text = dr["barcode"].ToString();
+                                    tft_pname.Text = dr["pname"].ToString();
+                                    tft_pdescription.Text = dr["pdesc"].ToString();
+                                    cb_brand.Text = dr["brand"].ToString();
+                                    cb_category.Text = dr["category"].ToString();
+                                    tft_cost.Text = dr["cost"].ToString();
+                                    tft_price.Text = dr["price"].ToString();
+                                    tft_reorder.Text = dr["reorder"].ToString();
+                                    cb_vendor.TextChanged -= cb_vendor_TextChanged;
+                                    cb_vendor.Text = dr["vendor"].ToString();
+                                    cb_vname.TextChanged -= cb_vname_TextChanged;
+                                    cb_vname.Text = dr["contactperson"].ToString();
+
+                                    btn_save.Enabled = false;
+                                    btn_update.Enabled = true;
+                                }
+                                else
+                                {
+                                    dr.Close();
+                                    con.Close();
+                                }
+                            }
+                            dr.Close();
+                            con.Close();
+                        }
+                        else
+                        {
+                            dr.Close();
+                            con.Close();
+                            tft_barcode.Text = "SR " + tft_pcode.Text;
+                        }
+                    }
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                dr.Close();
+                MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public bool bcodecheck(string val)
+        {
+            bool chb = false;
+            try
+            {
+                string bcode = "";
+                con.Open();
+                cm = new SqlCommand("SELECT barcode from table_products", con);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    bcode = dr["barcode"].ToString().ToLower();
+                    if (val == bcode)
+                    {
+                        //("Existing product");
+                        chb = true;
+                        break;
+                    }
+                }
+                dr.Close();
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                dr.Close();
+                MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return chb;
+        }
+
+        private void cb_vendor_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Close();
+
+                cb_vname.Text = "";
+                cb_vname.Items.Clear();
+                con.Open();
+                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "'", con);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    cb_vname.Items.Add(dr["contactperson"].ToString());
+                }
+                dr.Close();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                dr.Close();
+                MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

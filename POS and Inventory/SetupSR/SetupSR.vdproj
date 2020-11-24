@@ -1575,6 +1575,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9BA133410DD840289AFE3BC38B9B5ADE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9BB76D55AB60CDECD6FBE4138B17BAC9"
         "OwnerKey" = "8:_50FA0ED4E91D48D9B449A937601E2775"
         "MsmSig" = "8:_UNDEFINED"
@@ -1631,6 +1637,12 @@
         {
         "MsmKey" = "8:_A96268F7FA4D9FABDD8E67BEC3A5DAFC"
         "OwnerKey" = "8:_50FA0ED4E91D48D9B449A937601E2775"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AA054746FFB04196948976924E9324AD"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1781,12 +1793,6 @@
         {
         "MsmKey" = "8:_B234314D68AC89D22B678A05D4EC05B4"
         "OwnerKey" = "8:_1F9A0E9F75BC8FDBD91BDC182577869B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B331E91E62B54B599C6CC940217F77F8"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2619,12 +2625,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F5D52EDE5A2B41D38F6FD0ABCEE1C625"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F8B02F71609C8CFBA58AB6438CF366E9"
         "OwnerKey" = "8:_DF30203A0AE3A8BB04709408AEA0A5F6"
         "MsmSig" = "8:_UNDEFINED"
@@ -2722,12 +2722,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E9696D6688D96B59C2A4FACEBAEB8F1C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E8C21A5CD77F6C285461E14A30D426F7"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2747,6 +2741,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D447EA0C593119B9BA3EDE063A51AD5F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E9696D6688D96B59C2A4FACEBAEB8F1C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3897,7 +3897,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Smart Sales SR SS.msi"
+        "OutputFilename" = "8:Debug\\Smart Sales SR SSN24.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -7638,6 +7638,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9BA133410DD840289AFE3BC38B9B5ADE"
+            {
+            "SourcePath" = "8:D:\\Smartsales data till nov222020-stentr\\copied from data before build\\SmartSales_log.ldf"
+            "TargetName" = "8:SmartSales_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_5798523E4B6B42709D994BF79AF1EDD5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9BB76D55AB60CDECD6FBE4138B17BAC9"
             {
             "AssemblyRegister" = "3:1"
@@ -7886,6 +7906,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AA054746FFB04196948976924E9324AD"
+            {
+            "SourcePath" = "8:D:\\Smartsales data till nov222020-stentr\\copied from data before build\\SmartSales.mdf"
+            "TargetName" = "8:SmartSales.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_5798523E4B6B42709D994BF79AF1EDD5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AA99534ADA7D2AB6B233827E5013223F"
             {
             "AssemblyRegister" = "3:1"
@@ -8132,26 +8172,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B331E91E62B54B599C6CC940217F77F8"
-            {
-            "SourcePath" = "8:D:\\cdata\\original data smartsales\\SmartSales.mdf"
-            "TargetName" = "8:SmartSales.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_5798523E4B6B42709D994BF79AF1EDD5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B6352D33A5F72F82DA982886FEC1001B"
@@ -10176,26 +10196,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5D52EDE5A2B41D38F6FD0ABCEE1C625"
-            {
-            "SourcePath" = "8:D:\\cdata\\original data smartsales\\SmartSales_log.ldf"
-            "TargetName" = "8:SmartSales_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_5798523E4B6B42709D994BF79AF1EDD5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F8B02F71609C8CFBA58AB6438CF366E9"
             {
             "AssemblyRegister" = "3:1"
@@ -10564,15 +10564,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Smart Sales"
-        "ProductCode" = "8:{4521B89C-99CB-40D5-B7FB-85B5CFBCDDDC}"
-        "PackageCode" = "8:{8AD52A8E-FD16-44DB-B29A-8CE30E0BCA6B}"
+        "ProductCode" = "8:{D21CD966-5F67-408B-ADD4-D4B24C78822E}"
+        "PackageCode" = "8:{604A1167-7D46-4112-9E2A-412934CEAAD3}"
         "UpgradeCode" = "8:{A62E22B6-3C53-4D74-A829-663E54A1E134}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.3.0"
         "Manufacturer" = "8:FRMN Development Studio"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -11114,7 +11114,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_50FA0ED4E91D48D9B449A937601E2775"
             {
-            "SourcePath" = "8:..\\POS and Inventory\\obj\\Debug\\POS and Inventory.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5798523E4B6B42709D994BF79AF1EDD5"
