@@ -20,11 +20,11 @@ namespace Microsoft.Reporting.WinForms
 
         public static void Print(this LocalReport report, PageSettings pageSettings)
         {
+            //<PageHeight>{pageSettings.PaperSize.Height * 100}in</PageHeight>
             string deviceInfo =
                 $@"<DeviceInfo>
                     <OutputFormat>EMF</OutputFormat>
-                    <PageWidth>{pageSettings.PaperSize.Width * 100}in</PageWidth>
-                    <PageHeight>{pageSettings.PaperSize.Height * 100}in</PageHeight>
+                    <PageWidth>{pageSettings.PaperSize.Width * 100}in</PageWidth>                    
                     <MarginTop>{pageSettings.Margins.Top * 100}in</MarginTop>
                     <MarginLeft>{pageSettings.Margins.Left * 100}in</MarginLeft>
                     <MarginRight>{pageSettings.Margins.Right * 100}in</MarginRight>

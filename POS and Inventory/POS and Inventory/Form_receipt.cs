@@ -78,8 +78,8 @@ namespace POS_and_Inventory
                 Store = db.getstorename();
                 Address = db.getstoreaddress();
 
-                ReportParameter pVatable = new ReportParameter("pVatable", form.lbl_vatable.Text);
-                ReportParameter pVat = new ReportParameter("pVat", form.lbl_vat.Text);
+               // ReportParameter pVatable = new ReportParameter("pVatable", form.lbl_vatable.Text);
+                //ReportParameter pVat = new ReportParameter("pVat", form.lbl_vat.Text);
                 ReportParameter pDiscount = new ReportParameter("pDiscount", form.lbl_discount.Text);
                 ReportParameter pTotal = new ReportParameter("PTotal", form.lbl_salestotal.Text);
                 ReportParameter pCash = new ReportParameter("PCash", pcash);
@@ -91,8 +91,8 @@ namespace POS_and_Inventory
                 ReportParameter pcustomer = new ReportParameter("pcustomer", customer);
                 ReportParameter pbalance = new ReportParameter("pbalance", balance);
 
-                reportViewer1.LocalReport.SetParameters(pVatable);
-                reportViewer1.LocalReport.SetParameters(pVat);
+                //reportViewer1.LocalReport.SetParameters(pVatable);
+                //reportViewer1.LocalReport.SetParameters(pVat);
                 reportViewer1.LocalReport.SetParameters(pDiscount);
                 reportViewer1.LocalReport.SetParameters(pTotal);
                 reportViewer1.LocalReport.SetParameters(pCash);
@@ -109,9 +109,12 @@ namespace POS_and_Inventory
                 reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
                 
                 reportViewer1.ZoomMode = ZoomMode.Percent;
+                
                 reportViewer1.ZoomPercent = 100;
-
-                this.reportViewer1.LocalReport.PrintToPrinter();
+                
+                if (form.btn_eprt.Text == "Print-Enabled") {
+                    this.reportViewer1.LocalReport.PrintToPrinter();
+                }
 
                 // Variables
                 Warning[] warnings;

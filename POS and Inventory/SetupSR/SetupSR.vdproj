@@ -2722,6 +2722,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E9696D6688D96B59C2A4FACEBAEB8F1C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E8C21A5CD77F6C285461E14A30D426F7"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2741,12 +2747,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D447EA0C593119B9BA3EDE063A51AD5F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E9696D6688D96B59C2A4FACEBAEB8F1C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3897,7 +3897,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Smart Sales SR SSN24.msi"
+        "OutputFilename" = "8:Debug\\Smart Sales SR SSN28.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -10564,15 +10564,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Smart Sales"
-        "ProductCode" = "8:{D21CD966-5F67-408B-ADD4-D4B24C78822E}"
-        "PackageCode" = "8:{604A1167-7D46-4112-9E2A-412934CEAAD3}"
+        "ProductCode" = "8:{532081E1-244D-4AE6-8BBC-EE350A0F8080}"
+        "PackageCode" = "8:{2FA4BB1A-2376-4082-99AB-AF7B61371EA5}"
         "UpgradeCode" = "8:{A62E22B6-3C53-4D74-A829-663E54A1E134}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.3.0"
+        "ProductVersion" = "8:1.4.0"
         "Manufacturer" = "8:FRMN Development Studio"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -11114,7 +11114,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_50FA0ED4E91D48D9B449A937601E2775"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\POS and Inventory\\obj\\Release\\POS and Inventory.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5798523E4B6B42709D994BF79AF1EDD5"

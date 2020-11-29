@@ -158,6 +158,7 @@ namespace POS_and_Inventory
         public void clearbarcode(object sender, EventArgs e)
         {
             tft_searchbcode.Text = String.Empty;
+            tft_searchbcode.Focus();
         }
         public void AddtoCart(String _pcode, double _price, int _qty, double _cost)
         {
@@ -481,6 +482,7 @@ namespace POS_and_Inventory
                 form.picbox_cancel.Visible = true;
                 form.cb_cashiers.Text = lbl_username.Text;
                 form.suser = lbl_username.Text;
+                form.btn_profit.Enabled = false;
                 form.ShowDialog();
             }
             catch (Exception ex)
@@ -554,6 +556,7 @@ namespace POS_and_Inventory
             }
             else if (e.KeyCode == Keys.F8)
             {
+                tft_searchbcode.Focus();
                 tft_searchbcode.SelectionStart = 0;
                 tft_searchbcode.SelectionLength = tft_searchbcode.Text.Length;
             }
@@ -601,5 +604,20 @@ namespace POS_and_Inventory
             }
         }
 
+        private void btn_eprt_Click(object sender, EventArgs e)
+        {
+            if (btn_eprt.Text== "Print-Disabled")
+            {
+                btn_eprt.Text = "Print-Enabled";
+                btn_eprt.ForeColor = Color.Black;
+                btn_eprt.BackColor = Color.Green;
+            }
+            else
+            {
+                btn_eprt.Text = "Print-Disabled";
+                btn_eprt.ForeColor = Color.Black;
+                btn_eprt.BackColor = Color.Red;
+            }
+        }
     }
 }

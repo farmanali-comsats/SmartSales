@@ -27,7 +27,7 @@ namespace POS_and_Inventory
         private static string cn;
         public String MyConnection()
         {
-            cn = ConfigurationManager.ConnectionStrings["SmartSales_dev"].ConnectionString;
+            cn = ConfigurationManager.ConnectionStrings["SmartSales"].ConnectionString;
             return cn;
         }
         public double Getval()

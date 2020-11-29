@@ -68,7 +68,8 @@ namespace POS_and_Inventory
                     dataGridView1.Rows.Clear();
                     con.Open(); cm = new SqlCommand("select pcode, pname, pdesc, quantity from table_products where barcode like '%" + tft_bcode.Text + "%'", con);
                     dr = cm.ExecuteReader();
-                    while (dr.Read())
+                    dr.Read();
+                    if (dr.HasRows)
                     {
                         i++;
                         dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());

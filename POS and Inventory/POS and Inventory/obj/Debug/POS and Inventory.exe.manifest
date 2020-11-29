@@ -1016,14 +1016,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="POS and Inventory.exe" size="3969024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="POS and Inventory.exe" size="3964928">
       <assemblyIdentity name="POS and Inventory" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lYaqXlG21eMy5+31I0PI0QxYW1qOA6RXIXFEEv1MPjo=</dsig:DigestValue>
+        <dsig:DigestValue>IyER4CgdBLNnfEp82r50ZShuNuMjxLCQ5Dp5p/bR9RE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

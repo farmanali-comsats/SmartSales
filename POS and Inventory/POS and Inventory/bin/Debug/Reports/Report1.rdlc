@@ -611,38 +611,6 @@
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="pVatable">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!pVatable.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>pVatable</rd:DefaultName>
-            <Top>0.60625in</Top>
-            <Left>1.72956in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="pDiscount">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -660,11 +628,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pDiscount</rd:DefaultName>
-            <Top>1.10625in</Top>
-            <Left>1.72956in</Left>
+            <Top>0.65625in</Top>
+            <Left>1.82956in</Left>
             <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>2</ZIndex>
+            <Width>0.9875in</Width>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -692,11 +660,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>PTotal</rd:DefaultName>
-            <Top>1.35625in</Top>
-            <Left>1.73389in</Left>
+            <Top>0.90625in</Top>
+            <Left>1.83389in</Left>
             <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>3</ZIndex>
+            <Width>0.9875in</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -724,11 +692,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>PCash</rd:DefaultName>
-            <Top>1.60625in</Top>
-            <Left>1.73389in</Left>
+            <Top>1.15625in</Top>
+            <Left>1.83389in</Left>
             <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>4</ZIndex>
+            <Width>0.9875in</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -756,75 +724,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>PChange</rd:DefaultName>
-            <Top>2.10625in</Top>
-            <Left>1.73389in</Left>
+            <Top>1.65625in</Top>
+            <Left>1.83389in</Left>
             <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox15">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Vatable</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox15</rd:DefaultName>
-            <Top>0.60625in</Top>
-            <Left>0.254cm</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox16">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Vat</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>0.85625in</Top>
-            <Left>0.254cm</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>7</ZIndex>
+            <Width>0.9875in</Width>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -852,11 +756,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox17</rd:DefaultName>
-            <Top>1.10625in</Top>
+            <Top>0.65625in</Top>
             <Left>0.254cm</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -884,11 +788,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox18</rd:DefaultName>
-            <Top>1.35625in</Top>
+            <Top>0.90625in</Top>
             <Left>0.10001in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -916,11 +820,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>1.60625in</Top>
+            <Top>1.15625in</Top>
             <Left>0.10001in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -948,11 +852,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>2.10625in</Top>
+            <Top>1.65625in</Top>
             <Left>0.10001in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -980,43 +884,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>2.38403in</Top>
+            <Top>1.93403in</Top>
             <Left>0.49233in</Left>
             <Height>0.25in</Height>
             <Width>1.93483in</Width>
-            <ZIndex>12</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="pVat">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!pVat.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>pVat</rd:DefaultName>
-            <Top>0.85625in</Top>
-            <Left>1.73389in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1044,11 +916,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pbalance</rd:DefaultName>
-            <Top>1.85625in</Top>
-            <Left>1.72956in</Left>
+            <Top>1.40625in</Top>
+            <Left>1.82956in</Left>
             <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>14</ZIndex>
+            <Width>0.9875in</Width>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1074,11 +946,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.85625in</Top>
+            <Top>1.40625in</Top>
             <Left>0.254cm</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1108,11 +980,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox35</rd:DefaultName>
-            <Top>6.69043cm</Top>
+            <Top>5.54743cm</Top>
             <Left>0.254cm</Left>
             <Height>0.473cm</Height>
-            <Width>6.9865cm</Width>
-            <ZIndex>16</ZIndex>
+            <Width>6.90133cm</Width>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1123,14 +995,25 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Line Name="Line2">
+            <Top>0.59236in</Top>
+            <Height>0in</Height>
+            <Width>2.89014in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
         </ReportItems>
-        <Height>7.27604cm</Height>
+        <Height>6.02043cm</Height>
         <Style />
       </Body>
-      <Width>7.34095cm</Width>
+      <Width>7.34096cm</Width>
       <Page>
         <PageHeader>
-          <Height>3.31646cm</Height>
+          <Height>3.29558cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1207,20 +1090,28 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cashier:</Value>
+                      <Value>Cashier </Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
+                    <TextRun>
+                      <Value>:</Value>
+                      <Style>
+                        <FontSize>7pt</FontSize>
+                      </Style>
+                    </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>0.44667in</Top>
               <Left>0.1in</Left>
               <Height>0.25in</Height>
-              <Width>0.47566in</Width>
+              <Width>0.51733in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -1248,9 +1139,9 @@
               </Paragraphs>
               <rd:DefaultName>PTransaction</rd:DefaultName>
               <Top>0.69667in</Top>
-              <Left>0.18751in</Left>
+              <Left>0.13061in</Left>
               <Height>0.25in</Height>
-              <Width>2.59173in</Width>
+              <Width>2.64863in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -1292,17 +1183,6 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Line Name="Line1">
-              <Top>1.26611in</Top>
-              <Height>0in</Height>
-              <Width>2.89014in</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-              </Style>
-            </Line>
             <Textbox Name="pCashier">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -1316,15 +1196,17 @@
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pCashier</rd:DefaultName>
               <Top>0.44667in</Top>
               <Left>0.61733in</Left>
               <Height>0.25in</Height>
-              <Width>0.88541in</Width>
-              <ZIndex>6</ZIndex>
+              <Width>0.74791in</Width>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1342,21 +1224,23 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Customer:</Value>
-                      <Style />
+                      <Value>Customer :</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Right</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
               <Top>0.44667in</Top>
-              <Left>1.39458in</Left>
-              <Height>0.25in</Height>
-              <Width>0.6882in</Width>
-              <ZIndex>7</ZIndex>
+              <Left>1.38208in</Left>
+              <Height>0.23611in</Height>
+              <Width>0.63125in</Width>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1375,7 +1259,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Parameters!pcustomer.Value</Value>
-                      <Style />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
@@ -1385,10 +1271,10 @@
               </Paragraphs>
               <rd:DefaultName>pcustomer</rd:DefaultName>
               <Top>0.44667in</Top>
-              <Left>2.10222in</Left>
+              <Left>2.02722in</Left>
               <Height>0.25in</Height>
-              <Width>0.66452in</Width>
-              <ZIndex>8</ZIndex>
+              <Width>0.75234in</Width>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1399,6 +1285,18 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Line Name="Line3">
+              <Top>1.28358in</Top>
+              <Left>0cm</Left>
+              <Height>0in</Height>
+              <Width>2.89014in</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+              </Style>
+            </Line>
           </ReportItems>
           <Style>
             <Border>
@@ -1406,22 +1304,34 @@
             </Border>
           </Style>
         </PageHeader>
-        <PageHeight>455in</PageHeight>
+        <PageHeight>50cm</PageHeight>
         <PageWidth>8cm</PageWidth>
         <LeftMargin>0cm</LeftMargin>
         <RightMargin>0cm</RightMargin>
         <TopMargin>0cm</TopMargin>
         <BottomMargin>0cm</BottomMargin>
         <ColumnSpacing>0.13cm</ColumnSpacing>
-        <Style />
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <TopBorder>
+            <Style>Dotted</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Style>Dotted</Style>
+          </BottomBorder>
+          <LeftBorder>
+            <Style>Solid</Style>
+          </LeftBorder>
+          <RightBorder>
+            <Style>Solid</Style>
+          </RightBorder>
+        </Style>
       </Page>
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="pVatable">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="pDiscount">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -1450,10 +1360,6 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="pVat">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="pCashier">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -1472,11 +1378,6 @@
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>4</NumberOfRows>
       <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>pVatable</ParameterName>
-        </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
@@ -1511,11 +1412,6 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>2</RowIndex>
           <ParameterName>PTransaction</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>pVat</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
