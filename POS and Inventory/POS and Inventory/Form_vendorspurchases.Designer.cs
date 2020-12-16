@@ -36,17 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_vendorspurchases));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_id = new System.Windows.Forms.Label();
-            this.picbox_add = new System.Windows.Forms.PictureBox();
-            this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
-            this.lbl_TITLE = new System.Windows.Forms.Label();
-            this.tft_search = new MetroFramework.Controls.MetroTextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_tbalance = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_total = new System.Windows.Forms.Label();
             this.SNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_vendor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +48,17 @@
             this.col_pay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewImageColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tft_search = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.picbox_add = new System.Windows.Forms.PictureBox();
+            this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
+            this.lbl_TITLE = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_tbalance = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_add)).BeginInit();
@@ -112,168 +112,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(984, 602);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.tft_search);
-            this.panel1.Controls.Add(this.lbl_id);
-            this.panel1.Controls.Add(this.picbox_add);
-            this.panel1.Controls.Add(this.pictureBox_cancel);
-            this.panel1.Controls.Add(this.lbl_TITLE);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 41);
-            this.panel1.TabIndex = 6;
-            // 
-            // lbl_id
-            // 
-            this.lbl_id.Enabled = false;
-            this.lbl_id.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(306, 16);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(13, 10);
-            this.lbl_id.TabIndex = 6;
-            this.lbl_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_id.Visible = false;
-            // 
-            // picbox_add
-            // 
-            this.picbox_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picbox_add.Image = ((System.Drawing.Image)(resources.GetObject("picbox_add.Image")));
-            this.picbox_add.Location = new System.Drawing.Point(924, 4);
-            this.picbox_add.Name = "picbox_add";
-            this.picbox_add.Size = new System.Drawing.Size(25, 28);
-            this.picbox_add.TabIndex = 5;
-            this.picbox_add.TabStop = false;
-            this.picbox_add.Click += new System.EventHandler(this.picbox_add_Click);
-            // 
-            // pictureBox_cancel
-            // 
-            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
-            this.pictureBox_cancel.Location = new System.Drawing.Point(955, 4);
-            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox_cancel.Name = "pictureBox_cancel";
-            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
-            this.pictureBox_cancel.TabIndex = 4;
-            this.pictureBox_cancel.TabStop = false;
-            this.pictureBox_cancel.Click += new System.EventHandler(this.pictureBox_cancel_Click);
-            // 
-            // lbl_TITLE
-            // 
-            this.lbl_TITLE.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TITLE.Location = new System.Drawing.Point(3, 4);
-            this.lbl_TITLE.Name = "lbl_TITLE";
-            this.lbl_TITLE.Size = new System.Drawing.Size(164, 35);
-            this.lbl_TITLE.TabIndex = 0;
-            this.lbl_TITLE.Text = "Vendor History";
-            this.lbl_TITLE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tft_search
-            // 
-            this.tft_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.tft_search.CustomButton.Image = null;
-            this.tft_search.CustomButton.Location = new System.Drawing.Point(388, 1);
-            this.tft_search.CustomButton.Name = "";
-            this.tft_search.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.tft_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tft_search.CustomButton.TabIndex = 1;
-            this.tft_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tft_search.CustomButton.UseSelectable = true;
-            this.tft_search.CustomButton.Visible = false;
-            this.tft_search.DisplayIcon = true;
-            this.tft_search.Icon = ((System.Drawing.Image)(resources.GetObject("tft_search.Icon")));
-            this.tft_search.Lines = new string[0];
-            this.tft_search.Location = new System.Drawing.Point(506, 7);
-            this.tft_search.MaxLength = 32767;
-            this.tft_search.Name = "tft_search";
-            this.tft_search.PasswordChar = '\0';
-            this.tft_search.PromptText = "Search Here";
-            this.tft_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tft_search.SelectedText = "";
-            this.tft_search.SelectionLength = 0;
-            this.tft_search.SelectionStart = 0;
-            this.tft_search.ShortcutsEnabled = true;
-            this.tft_search.Size = new System.Drawing.Size(412, 25);
-            this.tft_search.TabIndex = 7;
-            this.tft_search.UseSelectable = true;
-            this.tft_search.WaterMark = "Search Here";
-            this.tft_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tft_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tft_search.TextChanged += new System.EventHandler(this.tft_search_TextChanged);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Azure;
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.lbl_tbalance);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.lbl_total);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 605);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(984, 38);
-            this.panel4.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(260, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 38);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Total Balance";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_tbalance
-            // 
-            this.lbl_tbalance.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.lbl_tbalance.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_tbalance.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tbalance.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lbl_tbalance.Location = new System.Drawing.Point(444, 0);
-            this.lbl_tbalance.Name = "lbl_tbalance";
-            this.lbl_tbalance.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.lbl_tbalance.Size = new System.Drawing.Size(178, 38);
-            this.lbl_tbalance.TabIndex = 26;
-            this.lbl_tbalance.Text = "0.00";
-            this.lbl_tbalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(622, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 38);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Total Purchases";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_total
-            // 
-            this.lbl_total.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.lbl_total.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_total.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lbl_total.Location = new System.Drawing.Point(800, 0);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(184, 38);
-            this.lbl_total.TabIndex = 24;
-            this.lbl_total.Text = "0.00";
-            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SNo
             // 
@@ -373,7 +211,7 @@
             this.select.ReadOnly = true;
             this.select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.select.Visible = false;
-            this.select.Width = 17;
+            this.select.Width = 19;
             // 
             // delete
             // 
@@ -384,6 +222,168 @@
             this.delete.ReadOnly = true;
             this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.delete.Width = 17;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.tft_search);
+            this.panel1.Controls.Add(this.lbl_id);
+            this.panel1.Controls.Add(this.picbox_add);
+            this.panel1.Controls.Add(this.pictureBox_cancel);
+            this.panel1.Controls.Add(this.lbl_TITLE);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(984, 41);
+            this.panel1.TabIndex = 6;
+            // 
+            // tft_search
+            // 
+            this.tft_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.tft_search.CustomButton.Image = null;
+            this.tft_search.CustomButton.Location = new System.Drawing.Point(388, 1);
+            this.tft_search.CustomButton.Name = "";
+            this.tft_search.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.tft_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tft_search.CustomButton.TabIndex = 1;
+            this.tft_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tft_search.CustomButton.UseSelectable = true;
+            this.tft_search.CustomButton.Visible = false;
+            this.tft_search.DisplayIcon = true;
+            this.tft_search.Icon = ((System.Drawing.Image)(resources.GetObject("tft_search.Icon")));
+            this.tft_search.Lines = new string[0];
+            this.tft_search.Location = new System.Drawing.Point(506, 7);
+            this.tft_search.MaxLength = 32767;
+            this.tft_search.Name = "tft_search";
+            this.tft_search.PasswordChar = '\0';
+            this.tft_search.PromptText = "Search Here";
+            this.tft_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tft_search.SelectedText = "";
+            this.tft_search.SelectionLength = 0;
+            this.tft_search.SelectionStart = 0;
+            this.tft_search.ShortcutsEnabled = true;
+            this.tft_search.Size = new System.Drawing.Size(412, 25);
+            this.tft_search.TabIndex = 7;
+            this.tft_search.UseSelectable = true;
+            this.tft_search.WaterMark = "Search Here";
+            this.tft_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tft_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tft_search.TextChanged += new System.EventHandler(this.tft_search_TextChanged);
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.Enabled = false;
+            this.lbl_id.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(306, 16);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(13, 10);
+            this.lbl_id.TabIndex = 6;
+            this.lbl_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_id.Visible = false;
+            // 
+            // picbox_add
+            // 
+            this.picbox_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picbox_add.Image = ((System.Drawing.Image)(resources.GetObject("picbox_add.Image")));
+            this.picbox_add.Location = new System.Drawing.Point(924, 4);
+            this.picbox_add.Name = "picbox_add";
+            this.picbox_add.Size = new System.Drawing.Size(25, 28);
+            this.picbox_add.TabIndex = 5;
+            this.picbox_add.TabStop = false;
+            this.picbox_add.Click += new System.EventHandler(this.picbox_add_Click);
+            // 
+            // pictureBox_cancel
+            // 
+            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
+            this.pictureBox_cancel.Location = new System.Drawing.Point(955, 4);
+            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox_cancel.Name = "pictureBox_cancel";
+            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox_cancel.TabIndex = 4;
+            this.pictureBox_cancel.TabStop = false;
+            this.pictureBox_cancel.Click += new System.EventHandler(this.pictureBox_cancel_Click);
+            // 
+            // lbl_TITLE
+            // 
+            this.lbl_TITLE.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TITLE.Location = new System.Drawing.Point(3, 4);
+            this.lbl_TITLE.Name = "lbl_TITLE";
+            this.lbl_TITLE.Size = new System.Drawing.Size(164, 35);
+            this.lbl_TITLE.TabIndex = 0;
+            this.lbl_TITLE.Text = "Vendor History";
+            this.lbl_TITLE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Azure;
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lbl_tbalance);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lbl_total);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 605);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(984, 38);
+            this.panel4.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(260, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 38);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Total Balance";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_tbalance
+            // 
+            this.lbl_tbalance.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.lbl_tbalance.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_tbalance.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tbalance.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lbl_tbalance.Location = new System.Drawing.Point(444, 0);
+            this.lbl_tbalance.Name = "lbl_tbalance";
+            this.lbl_tbalance.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.lbl_tbalance.Size = new System.Drawing.Size(178, 38);
+            this.lbl_tbalance.TabIndex = 26;
+            this.lbl_tbalance.Text = "0.00";
+            this.lbl_tbalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(622, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 38);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Total Purchases";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_total
+            // 
+            this.lbl_total.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.lbl_total.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_total.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lbl_total.Location = new System.Drawing.Point(800, 0);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(184, 38);
+            this.lbl_total.TabIndex = 24;
+            this.lbl_total.Text = "0.00";
+            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form_vendorspurchases
             // 
@@ -413,8 +413,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picbox_add;
         private System.Windows.Forms.PictureBox pictureBox_cancel;
@@ -438,5 +436,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_pay;
         private System.Windows.Forms.DataGridViewImageColumn select;
         private System.Windows.Forms.DataGridViewImageColumn delete;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

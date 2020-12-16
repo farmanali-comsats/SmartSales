@@ -44,6 +44,7 @@
             this.col_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lbl_search = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).BeginInit();
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.lbl_search);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox_cancel);
             this.panel1.Controls.Add(this.picbox_addcustomer);
@@ -180,6 +182,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(940, 570);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // SNo
             // 
@@ -231,6 +234,15 @@
             this.select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.select.Width = 17;
             // 
+            // lbl_search
+            // 
+            this.lbl_search.AutoSize = true;
+            this.lbl_search.Location = new System.Drawing.Point(366, 9);
+            this.lbl_search.Name = "lbl_search";
+            this.lbl_search.Size = new System.Drawing.Size(80, 17);
+            this.lbl_search.TabIndex = 6;
+            this.lbl_search.Text = "[ F3 ] Search";
+            // 
             // Form_customerlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -249,6 +261,7 @@
             this.Load += new System.EventHandler(this.Form_customerlist_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_customerlist_KeyDown);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_addcustomer)).EndInit();
@@ -272,5 +285,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_address;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_contact;
         private System.Windows.Forms.DataGridViewImageColumn select;
+        private System.Windows.Forms.Label lbl_search;
     }
 }

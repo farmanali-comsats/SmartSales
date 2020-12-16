@@ -15,6 +15,7 @@ namespace POS_and_Inventory
 
     public partial class Form_POS : Form
     {
+       // public static bool chdisc = false;
         Timer timer = new Timer();
         Timer tftbfocus = new Timer();
         String id;
@@ -47,7 +48,7 @@ namespace POS_and_Inventory
                 }
                 gettransno();
                 tft_searchbcode.Enabled = true;
-                tft_searchbcode.Focus();
+                //tft_searchbcode.Focus();
             }
             catch (Exception ex)
             {
@@ -112,7 +113,7 @@ namespace POS_and_Inventory
                 btn_new_Click(sender, e);
                 timer.Interval = (3000);
                 timer.Tick += new EventHandler(clearbarcode);
-                timer.Start();
+                
 
                 if (tft_searchbcode.Text == String.Empty)
                 {
@@ -140,9 +141,12 @@ namespace POS_and_Inventory
                         dr.Close();
                         con.Close();
                         AddtoCart(_pcode, _price, _qty, _cost);
+                        timer.Start();
+                        //tft_searchbcode.Text = string.Empty;
                     }
                     else
                     {
+                        timer.Start();
                         dr.Close();
                         con.Close();
                     }
@@ -158,7 +162,12 @@ namespace POS_and_Inventory
         public void clearbarcode(object sender, EventArgs e)
         {
             tft_searchbcode.Text = String.Empty;
-            tft_searchbcode.Focus();
+            //if (chdisc!=true)
+            //{
+            //    tft_searchbcode.Focus();
+            //}
+            //tft_searchbcode.Focus();
+
         }
         public void AddtoCart(String _pcode, double _price, int _qty, double _cost)
         {
@@ -310,63 +319,18 @@ namespace POS_and_Inventory
             try
             {
                 String colname = dataGridView1.Columns[e.ColumnIndex].Name;
+                int ri = dataGridView1.CurrentRow.Index;
                 if (colname == "DELETE")
                 {
-                    if (MessageBox.Show("Remove this item?", stitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        con.Open();
-                        cm = new SqlCommand("delete from table_cart where id like '" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                        cm.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Item has been Successfully removed", stitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        loadcart();
-                    }
+                    deletefromcart(ri);
                 }
                 else if (colname == "col_add")
                 {
-                    int i = 0;
-                    con.Open();
-                    cm = new SqlCommand("select sum(quantity) as quantity from table_products where pcode like '" + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "'group by pcode", con);
-                    i = int.Parse(cm.ExecuteScalar().ToString());
-                    con.Close();
-
-                    if (int.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString()) < i)
-                    {
-                        con.Open();
-                        cm = new SqlCommand("update table_cart set qty = qty + " + int.Parse(tft_qty.Text) + "where transno like '" + lbl_trcode.Text + "' and pcode like'" + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "'", con);
-                        cm.ExecuteNonQuery();
-                        con.Close();
-
-                        loadcart();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Remaining Quantity in Stock is " + i + " ! ", "Out of Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                    pluscart(ri);
                 }
                 else if (colname == "col_remove")
                 {
-                    int i = 0;
-                    con.Open();
-                    cm = new SqlCommand("select sum(qty) as qty from table_cart where pcode like '" + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "'and transno like'" + lbl_trcode.Text + "'group by transno, pcode", con);
-                    i = int.Parse(cm.ExecuteScalar().ToString());
-                    con.Close();
-
-                    if (i > 1)
-                    {
-                        con.Open();
-                        cm = new SqlCommand("update table_cart set qty = qty - " + int.Parse(tft_qty.Text) + "where transno like '" + lbl_trcode.Text + "' and pcode like'" + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "'", con);
-                        cm.ExecuteNonQuery();
-                        con.Close();
-
-                        loadcart();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Remaining Quantity On Cart is " + i + " ! ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                    subtractcart(ri);
                 }
             }
             catch (Exception ex)
@@ -375,6 +339,85 @@ namespace POS_and_Inventory
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+        }
+        public void deletefromcart(int ri)
+        {
+            try
+            {
+                if (MessageBox.Show("Remove this item?", stitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    cm = new SqlCommand("delete from table_cart where id like '" + dataGridView1.Rows[ri].Cells[1].Value.ToString() + "'", con);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Item has been Successfully removed", stitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadcart();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public void pluscart(int ri)
+        {
+            try
+            {
+                int i = 0;
+                con.Open();
+                cm = new SqlCommand("select sum(quantity) as quantity from table_products where pcode like '" + dataGridView1.Rows[ri].Cells[2].Value.ToString() + "'group by pcode", con);
+                i = int.Parse(cm.ExecuteScalar().ToString());
+                con.Close();
+
+                if (int.Parse(dataGridView1.Rows[ri].Cells[5].Value.ToString()) < i)
+                {
+                    con.Open();
+                    cm = new SqlCommand("update table_cart set qty = qty + " + int.Parse(tft_qty.Text) + "where transno like '" + lbl_trcode.Text + "' and pcode like'" + dataGridView1.Rows[ri].Cells[2].Value.ToString() + "'", con);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+
+                    loadcart();
+                }
+                else
+                {
+                    MessageBox.Show("Remaining Quantity in Stock is " + i + " ! ", "Out of Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public void subtractcart(int ri)
+        {
+            try
+            {
+                int i = 0;
+                con.Open();
+                cm = new SqlCommand("select sum(qty) as qty from table_cart where pcode like '" + dataGridView1.Rows[ri].Cells[2].Value.ToString() + "'and transno like'" + lbl_trcode.Text + "'group by transno, pcode", con);
+                i = int.Parse(cm.ExecuteScalar().ToString());
+                con.Close();
+
+                if (i > 1)
+                {
+                    con.Open();
+                    cm = new SqlCommand("update table_cart set qty = qty - " + int.Parse(tft_qty.Text) + "where transno like '" + lbl_trcode.Text + "' and pcode like'" + dataGridView1.Rows[ri].Cells[2].Value.ToString() + "'", con);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+
+                    loadcart();
+                }
+                else
+                {
+                    MessageBox.Show("Remaining Quantity On Cart is " + i + " ! ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
         public void notifycriticalitems()
         {
@@ -416,6 +459,8 @@ namespace POS_and_Inventory
         {
             try
             {
+                
+                //chdisc = true;
                 double p;
                 Form_discount myform = new Form_discount(this);
                 myform.lbl_id.Text = id;
@@ -424,7 +469,7 @@ namespace POS_and_Inventory
                 p = double.Parse(dataGridView1[4, i].Value.ToString());
                 qty = int.Parse(dataGridView1[5, i].Value.ToString());
                 myform.tft_price.Text = (p * qty).ToString();
-                myform.Show();
+                myform.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -467,7 +512,7 @@ namespace POS_and_Inventory
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message+"frmn", stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -478,6 +523,8 @@ namespace POS_and_Inventory
                 Form_Solditems form = new Form_Solditems();
                 form.dt1.Enabled = false;
                 form.dt2.Enabled = false;
+                form.dt1.Value = DateTime.Today;
+                form.dt2.Value = DateTime.Now;
                 form.cb_cashiers.Enabled = false;
                 form.picbox_cancel.Visible = true;
                 form.cb_cashiers.Text = lbl_username.Text;
@@ -557,8 +604,8 @@ namespace POS_and_Inventory
             else if (e.KeyCode == Keys.F8)
             {
                 tft_searchbcode.Focus();
-                tft_searchbcode.SelectionStart = 0;
-                tft_searchbcode.SelectionLength = tft_searchbcode.Text.Length;
+                //tft_searchbcode.SelectionStart = 0;
+                //tft_searchbcode.SelectionLength = tft_searchbcode.Text.Length;
             }
             else if (e.KeyCode == Keys.F10)
             {
@@ -617,6 +664,28 @@ namespace POS_and_Inventory
                 btn_eprt.Text = "Print-Disabled";
                 btn_eprt.ForeColor = Color.Black;
                 btn_eprt.BackColor = Color.Red;
+            }
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.D)
+            {
+                btn_discount_Click(sender,e);
+            }else if (e.KeyCode == Keys.Delete)
+            {
+                int ri = dataGridView1.CurrentRow.Index;
+                deletefromcart(ri);                
+            }else if (e.KeyCode == Keys.Add)
+            {
+                int ri = dataGridView1.CurrentRow.Index;
+                pluscart(ri);
+                //dataGridView1.ClearSelection();
+                //dataGridView1.Rows[ri].Selected = true;
+            }else if (e.KeyCode == Keys.Subtract)
+            {
+                int ri = dataGridView1.CurrentRow.Index;
+                subtractcart(ri);
             }
         }
     }

@@ -108,7 +108,9 @@ namespace POS_and_Inventory
                         form.ShowDialog();
 
                         MessageBox.Show("Payment Successfull!", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       
                         f.gettransno();
+                        
                         f.loadcart();
                         this.Dispose();
                     }
@@ -242,10 +244,6 @@ namespace POS_and_Inventory
             {
                 btn_enter_Click(sender, e);
             }
-            if (e.Modifiers == Keys.RShiftKey && e.KeyCode == Keys.Enter)
-            {
-                btn_paylater_Click(sender, e);
-           }
         }
         private void checkbox_customer_CheckedChanged(object sender, EventArgs e)
         {
@@ -367,6 +365,17 @@ namespace POS_and_Inventory
             if (e.KeyCode == Keys.Escape)
             {
                 this.Dispose();
+            }
+        }
+
+        private void tft_cash_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Insert)
+            {
+                Form_customerlist form = new Form_customerlist(this);
+                form.ShowDialog();
+                form.pictureBox_cancel.Visible = true;
+                btn_paylater.Enabled = true;
             }
         }
     }

@@ -143,6 +143,8 @@ namespace POS_and_Inventory
                 tft_pdiscount.Enabled = true;
                 tft_amount.Text = "0";
                 tft_pdiscount.Text = "0";
+                tft_pdiscount.Focus();
+                tft_pdiscount.SelectAll();
             }
             else
             {
@@ -150,7 +152,15 @@ namespace POS_and_Inventory
                 tft_pdiscount.Enabled = false;
                 tft_amount.Text = "0";
                 tft_pdiscount.Text = "0";
+                tft_amount.Focus();
+                tft_amount.SelectAll();
             }
+        }
+
+        private void Form_discount_Load(object sender, EventArgs e)
+        {
+            tft_amount.Focus();
+            tft_amount.SelectAll();
         }
     }
 }

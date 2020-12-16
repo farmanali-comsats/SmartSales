@@ -78,6 +78,9 @@
             this.panel_top.Name = "panel_top";
             this.panel_top.Size = new System.Drawing.Size(619, 40);
             this.panel_top.TabIndex = 2;
+            this.panel_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseDown);
+            this.panel_top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseMove);
+            this.panel_top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseUp);
             // 
             // lbl_addbrand
             // 
@@ -451,7 +454,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_addproduct";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.Form_addproduct_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_addproduct_KeyDown);
             this.panel_top.ResumeLayout(false);

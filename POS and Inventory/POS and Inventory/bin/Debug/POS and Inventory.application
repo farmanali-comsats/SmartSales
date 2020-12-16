@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="POS and Inventory.exe.manifest" size="69579">
+    <dependentAssembly dependencyType="install" codebase="POS and Inventory.exe.manifest" size="74398">
       <assemblyIdentity name="POS and Inventory.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JC7ZMxcCogEh86WAY36WZz+yNdfgv5AGak/V/KI+vuA=</dsig:DigestValue>
+        <dsig:DigestValue>4pod2wnP2Y5k/++rY4JlNHmpZoG9pye0JzHLkFbnqJw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

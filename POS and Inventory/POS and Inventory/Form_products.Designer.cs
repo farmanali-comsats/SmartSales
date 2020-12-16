@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_search = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tft_search = new MetroFramework.Controls.MetroTextBox();
             this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
@@ -64,6 +65,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.lbl_search);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox_cancel);
             this.panel1.Controls.Add(this.picbox_addproduct);
@@ -73,6 +75,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(947, 40);
             this.panel1.TabIndex = 3;
+            // 
+            // lbl_search
+            // 
+            this.lbl_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_search.Location = new System.Drawing.Point(364, 9);
+            this.lbl_search.Name = "lbl_search";
+            this.lbl_search.Size = new System.Drawing.Size(86, 19);
+            this.lbl_search.TabIndex = 11;
+            this.lbl_search.Text = "[ F3 ] Search";
             // 
             // panel2
             // 
@@ -154,6 +165,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
@@ -362,5 +374,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vid;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
+        private System.Windows.Forms.Label lbl_search;
     }
 }

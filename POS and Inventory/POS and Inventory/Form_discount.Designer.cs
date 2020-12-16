@@ -192,6 +192,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_discount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.Form_discount_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_discount_KeyDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -209,10 +211,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_confirm;
-        private System.Windows.Forms.TextBox tft_pdiscount;
-        private System.Windows.Forms.TextBox tft_amount;
         public System.Windows.Forms.TextBox tft_price;
         public System.Windows.Forms.Label lbl_id;
-        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.TextBox tft_pdiscount;
+        public System.Windows.Forms.TextBox tft_amount;
+        public System.Windows.Forms.CheckBox checkBox1;
     }
 }

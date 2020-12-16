@@ -84,7 +84,40 @@ namespace POS_and_Inventory
             if (e.KeyCode == Keys.Escape)
             {
                 this.Dispose();
-            }            
+            }else if (e.KeyCode == Keys.F3)
+            {
+                tft_search.Focus();
+                tft_search.SelectAll();
+            }
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                
+                if (e.KeyCode ==Keys.Enter)
+                {
+                    int ri = dataGridView1.CurrentRow.Index;
+                    Formqty frm = new Formqty(myform);
+                    frm.productdetails(dataGridView1.Rows[ri].Cells[1].Value.ToString(), double.Parse(dataGridView1.Rows[ri].Cells[7].Value.ToString()), double.Parse(dataGridView1.Rows[ri].Cells[8].Value.ToString()), myform.lbl_trcode.Text, int.Parse(dataGridView1.Rows[ri].Cells[9].Value.ToString()));
+                    dr.Close();
+                    con.Close();
+                    frm.ShowDialog();
+                }
+                else if(e.KeyCode == Keys.Escape)
+                {
+                    this.Dispose();
+                }else if (e.KeyCode == Keys.F3)
+                {
+                    tft_search.Focus();
+                    tft_search.SelectAll();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

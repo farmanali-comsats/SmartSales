@@ -35,7 +35,7 @@ namespace POS_and_Inventory
             int i = 0;
             dataGridView1.Rows.Clear();
             con.Open();
-            cm = new SqlCommand("select * from table_brands order by brand", con);
+            cm = new SqlCommand("select * from table_brands where brand like '%"+tft_search.Text+"%'order by brand", con);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
@@ -51,14 +51,10 @@ namespace POS_and_Inventory
             try
             {
                 string colname = dataGridView1.Columns[e.ColumnIndex].Name;
+                int ri = dataGridView1.CurrentRow.Index;
                 if (colname == "EDIT")
                 {
-                    Form_addbrand form = new Form_addbrand(this);
-                    form.lblid.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                    form.tft_brandname.Text = dataGridView1[2, e.RowIndex].Value.ToString();
-                    form.btn_save.Enabled = false;
-                    form.btn_update.Enabled = true;
-                    form.ShowDialog();
+                    editbrand(ri);
                 }
                 else if (colname == "DELETE")
                 {
@@ -77,6 +73,22 @@ namespace POS_and_Inventory
             {
             }
         }
+        public void editbrand(int rowindex)
+        {
+            try
+            {
+                Form_addbrand form = new Form_addbrand(this);
+                form.lblid.Text = dataGridView1[1,rowindex].Value.ToString();
+                form.tft_brandname.Text = dataGridView1[2, rowindex].Value.ToString();
+                form.btn_save.Enabled = false;
+                form.btn_update.Enabled = true;
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
         private void pb_cancel_Click(object sender, EventArgs e)
         {
@@ -85,14 +97,33 @@ namespace POS_and_Inventory
 
         private void Form_Brand_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.N)
+            if (e.KeyCode == Keys.Insert)
             {
                 picbox_addbrand_Click(sender, e);
-            }
-            else if (e.KeyCode == Keys.Insert)
+            }else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.Delete)
             {
-                picbox_addbrand_Click(sender, e);
+                tft_search.Focus();
+                tft_search.SelectAll();
             }
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int ri = dataGridView1.CurrentRow.Index;
+                editbrand(ri);
+            }
+            else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.Delete)
+            {
+                tft_search.Focus();
+                tft_search.SelectAll();
+            }
+        }
+
+        private void tft_search_TextChanged(object sender, EventArgs e)
+        {
+            LoadRecords();
         }
     }
 }

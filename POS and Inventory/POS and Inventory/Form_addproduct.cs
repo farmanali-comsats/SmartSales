@@ -25,6 +25,7 @@ namespace POS_and_Inventory
         Form_products formproduct;
         String stitle = "Smart Sales System";
         static bool ch = true;
+        int mov, movx, movy;
         public Form_addproduct(Form_products frm)
         {
             InitializeComponent();
@@ -87,6 +88,7 @@ namespace POS_and_Inventory
         private void Form_addproduct_Load(object sender, EventArgs e)
         {
             //loadproductcode();
+            this.Location = Screen.AllScreens[0].WorkingArea.Location;
             loadbrand();
             loadcategory();
             loadvendor();
@@ -159,6 +161,7 @@ namespace POS_and_Inventory
             {
                 byte[] pic = null;
                 MemoryStream mem;
+                String receiptdir = @"D:\SmatSalesReports\Barcodes";
                 if (tft_pname.Text != string.Empty && tft_pdescription.Text != string.Empty && tft_cost.Text != string.Empty && tft_price.Text != string.Empty && cb_brand.Text != "" && cb_category.Text != "" && cb_vendor.Text != "" && cb_vname.Text != "")
                 {
                     if (bcodecheck(tft_barcode.Text.Trim().ToLower()))
@@ -210,8 +213,8 @@ namespace POS_and_Inventory
                             }
                             cm.Parameters.AddWithValue("@pcode", tft_pcode.Text);
                             cm.Parameters.AddWithValue("@barcode", tft_barcode.Text.Trim());
-                            cm.Parameters.AddWithValue("@pname", tft_pname.Text);
-                            cm.Parameters.AddWithValue("@pdesc", tft_pdescription.Text);
+                            cm.Parameters.AddWithValue("@pname", tft_pname.Text.Trim());
+                            cm.Parameters.AddWithValue("@pdesc", tft_pdescription.Text.Trim());
                             cm.Parameters.AddWithValue("@bid", bid);
                             cm.Parameters.AddWithValue("@cid", cid);
                             cm.Parameters.AddWithValue("@cost", Double.Parse(tft_cost.Text));
@@ -219,25 +222,34 @@ namespace POS_and_Inventory
                             cm.Parameters.AddWithValue("@reorder", int.Parse(tft_reorder.Text));
                             cm.Parameters.AddWithValue("@vid", int.Parse(lbl_vid.Text));
 
+                            FileStream fs;
                             if (pictureBox_barcode.Image != null)
                             {
                                 cm.Parameters.AddWithValue("@barcode_image", pic);
 
-                                string strfn = Convert.ToString(Application.StartupPath + @"\Barcodes\SR-" + tft_pcode.Text + ".png");
-                                if (File.Exists(strfn))
+                                string strfn = Application.StartupPath + @"\Barcodes\SR-" + tft_pcode.Text + ".png";
+                                String filename1 = receiptdir+"\\SR-" + tft_pcode.Text + ".png";
+                                if (!Directory.Exists(receiptdir))
                                 {
-                                    FileStream fs = new FileStream(strfn, FileMode.Append, FileAccess.Write);
+                                    Directory.CreateDirectory(receiptdir);
+                                }
+                                if (File.Exists(strfn) || File.Exists(filename1))
+                                {
+                                    fs = new FileStream(strfn, FileMode.Append, FileAccess.Write);
+                                    fs = new FileStream(filename1, FileMode.Append, FileAccess.Write);
                                     fs.Write(pic, 0, pic.Length);
                                     fs.Flush();
                                     fs.Close();
                                 }
                                 else
                                 {
-                                    FileStream fs = new FileStream(strfn, FileMode.CreateNew, FileAccess.Write);
+                                    fs = new FileStream(strfn, FileMode.CreateNew, FileAccess.Write);
+                                    fs = new FileStream(filename1, FileMode.CreateNew, FileAccess.Write);
                                     fs.Write(pic, 0, pic.Length);
                                     fs.Flush();
                                     fs.Close();
-                                }
+                                }                                
+                                
 
                             }
                             else
@@ -696,6 +708,28 @@ namespace POS_and_Inventory
                 dr.Close();
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void panel_top_MouseDown(object sender, MouseEventArgs e)
+        {
+            //if (e.ChangedButton == MouseButton.Left)
+            //this.DragMove();
+            mov = 1;
+            movx = e.X;
+            movy = e.Y;
+        }
+
+        private void panel_top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov ==1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movx, MousePosition.Y - movy);
+            }
+        }
+
+        private void panel_top_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
         }
     }
 }

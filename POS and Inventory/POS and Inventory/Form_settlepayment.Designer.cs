@@ -109,6 +109,7 @@
             this.tft_cash.Text = "0.00";
             this.tft_cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tft_cash.TextChanged += new System.EventHandler(this.tft_cash_TextChanged);
+            this.tft_cash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tft_cash_KeyDown);
             // 
             // tft_change
             // 

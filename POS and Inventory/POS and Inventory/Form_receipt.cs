@@ -78,7 +78,7 @@ namespace POS_and_Inventory
                 Store = db.getstorename();
                 Address = db.getstoreaddress();
 
-               // ReportParameter pVatable = new ReportParameter("pVatable", form.lbl_vatable.Text);
+                //ReportParameter pVatable = new ReportParameter("pVatable", form.lbl_vatable.Text);
                 //ReportParameter pVat = new ReportParameter("pVat", form.lbl_vat.Text);
                 ReportParameter pDiscount = new ReportParameter("pDiscount", form.lbl_discount.Text);
                 ReportParameter pTotal = new ReportParameter("PTotal", form.lbl_salestotal.Text);
@@ -123,11 +123,23 @@ namespace POS_and_Inventory
                 string encoding = string.Empty;
                 string extension = string.Empty;
 
-                
+                String receiptdir = @"D:\SmatSalesReports\Receipts";
+
                 byte[] bytes = reportViewer1.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
                 String filename = Application.StartupPath + @"\Receipts\" +form.lbl_trcode.Text+".pdf";
                 File.WriteAllBytes(filename,bytes);
+                String filename1 = @"D:\SmatSalesReports\Receipts\" + form.lbl_trcode.Text + ".pdf";
+                if (Directory.Exists(receiptdir))
+                {
+                    File.WriteAllBytes(filename1, bytes);
+                }
+                else
+                {
+                    Directory.CreateDirectory(receiptdir);
+                    File.WriteAllBytes(filename1, bytes);
+                }
+                    
                 //System.Diagnostics.Process.Start(filename);                               
 
             }

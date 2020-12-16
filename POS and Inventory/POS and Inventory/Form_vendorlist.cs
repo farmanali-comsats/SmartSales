@@ -40,7 +40,7 @@ namespace POS_and_Inventory
             dataGridView1.Rows.Clear();
             int i = 0;
             con.Open();
-            cm = new SqlCommand("select * from table_vendor", con);
+            cm = new SqlCommand("select * from table_vendor where (vendor like '%"+tft_search.Text+ "%' or contactperson like '%"+tft_search.Text+"%' or address like '%"+tft_search.Text+"%') order by vendor", con);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
@@ -56,29 +56,21 @@ namespace POS_and_Inventory
             try
             {
                 String colname = dataGridView1.Columns[e.ColumnIndex].Name;
+                int ri = dataGridView1.CurrentRow.Index;
                 if (colname == "EDIT")
                 {
-                    Form_Vendor f = new Form_Vendor(this);
-                    f.lbl_id.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    f.tft_vendor.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    f.tft_address.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    f.tft_contactperson.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    f.tft_contactno.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                    f.tft_email.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                    f.btn_save.Enabled = false;
-                    f.btn_update.Enabled = true;
-                    f.ShowDialog();
+                    editvendor(ri);
                 }
                 else if (colname == "DELETE")
                 {
                     if (MessageBox.Show("Confirm to Delete this Vendor?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        con.Open();
-                        cm = new SqlCommand("delete from table_vendor where id like '" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                        cm.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Record has been Successfully Deleted!", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        loadvendors();
+                        //con.Open();
+                        //cm = new SqlCommand("delete from table_vendor where id like '" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
+                        //cm.ExecuteNonQuery();
+                        //con.Close();
+                        //MessageBox.Show("Record has been Successfully Deleted!", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //loadvendors();
                     }
                 }
                 else if (colname == "Column_vendor")
@@ -93,10 +85,44 @@ namespace POS_and_Inventory
             {
             }
         }
+        public void editvendor(int ri)
+        {
+            try
+            {                
+                Form_Vendor f = new Form_Vendor(this);
+                f.lbl_id.Text = dataGridView1.Rows[ri].Cells[1].Value.ToString();
+                f.tft_vendor.Text = dataGridView1.Rows[ri].Cells[2].Value.ToString();
+                f.tft_address.Text = dataGridView1.Rows[ri].Cells[3].Value.ToString();
+                f.tft_contactperson.Text = dataGridView1.Rows[ri].Cells[4].Value.ToString();
+                f.tft_contactno.Text = dataGridView1.Rows[ri].Cells[5].Value.ToString();
+                f.tft_email.Text = dataGridView1.Rows[ri].Cells[6].Value.ToString();
+                f.btn_save.Enabled = false;
+                f.btn_update.Enabled = true;
+                f.ShowDialog();
+            }            
+            catch (Exception ex)
+            {
+
+            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int ri = dataGridView1.CurrentRow.Index;
+                editvendor(ri);
+            }
+        }
+
+        private void tft_search_TextChanged(object sender, EventArgs e)
+        {
+            loadvendors();
         }
     }
 }

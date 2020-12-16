@@ -33,6 +33,7 @@ namespace POS_and_Inventory
             formproduct.loadbrand();
             formproduct.loadproductcode();
             formproduct.loadcategory();
+            formproduct.StartPosition = FormStartPosition.CenterScreen;
             formproduct.ShowDialog();
         }
         public void loadrecords()
@@ -42,7 +43,7 @@ namespace POS_and_Inventory
                 int i = 0;
                 dataGridView1.Rows.Clear();
                 con.Open();
-                cm = new SqlCommand("select p.pcode, p.barcode, p.pname, p.pdesc, b.brand, c.category,p.cost, p.price, p.reorder, v.vendor from table_products as p inner join table_brands as b on b.id = p.bid inner join table_category as c on c.id = p.cid inner join table_vendor as v on v.id = p.vid where (p.pname like '%" + tft_search.Text + "%' or p.pdesc like '%" + tft_search.Text + "%' or p.barcode like '" + tft_search.Text + "%' or v.vendor like '" + tft_search.Text + "%' or b.brand like '" + tft_search.Text + "%' or c.category like '" + tft_search.Text + "%')", con);
+                cm = new SqlCommand("select p.pcode, p.barcode, p.pname, p.pdesc, b.brand, c.category,p.cost, p.price, p.reorder, v.vendor from table_products as p inner join table_brands as b on b.id = p.bid inner join table_category as c on c.id = p.cid inner join table_vendor as v on v.id = p.vid where (p.pcode like '%" + tft_search.Text + "%' or p.pname like '%" + tft_search.Text + "%' or p.pdesc like '%" + tft_search.Text + "%' or p.barcode like '" + tft_search.Text + "%' or v.vendor like '%" + tft_search.Text + "%' or b.brand like '%" + tft_search.Text + "%' or c.category like '%" + tft_search.Text + "%')", con);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
@@ -71,52 +72,10 @@ namespace POS_and_Inventory
             {
                 string vname = string.Empty;
                 String colname = dataGridView1.Columns[e.ColumnIndex].Name;
-                int ri;
+                int ri = dataGridView1.CurrentRow.Index;
                 if (colname == "EDIT")
                 {
-                    Form_addproduct myform = new Form_addproduct(this);
-                    myform.btn_save.Enabled = false;
-                    myform.btn_update.Enabled = true;
-                    myform.tft_pcode.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    myform.tft_barcode.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    myform.tft_pname.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    myform.tft_pdescription.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    myform.cb_brand.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                    myform.cb_category.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                    myform.tft_cost.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-                    myform.tft_price.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-                    myform.tft_reorder.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-                    myform.cb_vendor.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-                    
-                    ri = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                    
-                    vname = getvendor(ri);
-                    myform.cb_vname.Text = vname;
-                    String bcodde = myform.tft_barcode.Text;
-                    String[] bcode;
-                    if (bcodde != String.Empty)
-                    {
-                        bcode = bcodde.Split(' ');
-                        foreach (String word in bcode)
-                        {
-                            if (word == "SR")
-                            {
-                                MemoryStream stream = new MemoryStream();
-                                con.Open();
-                                SqlCommand command = new SqlCommand("select barcode_image from table_products where pcode like'" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                                byte[] image = (byte[])command.ExecuteScalar();
-                                stream.Write(image, 0, image.Length);
-                                con.Close();
-                                Bitmap bitmap = new Bitmap(stream);
-                                myform.pictureBox_barcode.Image = bitmap;
-                                con.Close();
-                            }
-                        }
-                    }
-
-                    myform.btn_save.Enabled = false;
-                    myform.btn_update.Enabled = true;
-                    myform.ShowDialog();
+                    editproduct(ri);
                 }
                 else if (colname == "DELETE")
                 {
@@ -138,6 +97,53 @@ namespace POS_and_Inventory
                 dr.Close();
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+        public void editproduct(int ri)
+        {
+            string vname = string.Empty;
+            Form_addproduct myform = new Form_addproduct(this);
+            myform.btn_save.Enabled = false;
+            myform.btn_update.Enabled = true;
+            myform.tft_pcode.Text = dataGridView1.Rows[ri].Cells[1].Value.ToString();
+            myform.tft_barcode.Text = dataGridView1.Rows[ri].Cells[2].Value.ToString();
+            myform.tft_pname.Text = dataGridView1.Rows[ri].Cells[3].Value.ToString();
+            myform.tft_pdescription.Text = dataGridView1.Rows[ri].Cells[4].Value.ToString();
+            myform.cb_brand.Text = dataGridView1.Rows[ri].Cells[5].Value.ToString();
+            myform.cb_category.Text = dataGridView1.Rows[ri].Cells[6].Value.ToString();
+            myform.tft_cost.Text = dataGridView1.Rows[ri].Cells[7].Value.ToString();
+            myform.tft_price.Text = dataGridView1.Rows[ri].Cells[8].Value.ToString();
+            myform.tft_reorder.Text = dataGridView1.Rows[ri].Cells[9].Value.ToString();
+            myform.cb_vendor.Text = dataGridView1.Rows[ri].Cells[10].Value.ToString();
+
+            ri = (int)dataGridView1.Rows[ri].Cells[0].Value;
+
+            vname = getvendor(ri);
+            myform.cb_vname.Text = vname;
+            String bcodde = myform.tft_barcode.Text;
+            String[] bcode;
+            if (bcodde != String.Empty)
+            {
+                bcode = bcodde.Split(' ');
+                foreach (String word in bcode)
+                {
+                    if (word == "SR")
+                    {
+                        MemoryStream stream = new MemoryStream();
+                        con.Open();
+                        SqlCommand command = new SqlCommand("select barcode_image from table_products where pcode like'" + dataGridView1.Rows[ri].Cells[1].Value.ToString() + "'", con);
+                        byte[] image = (byte[])command.ExecuteScalar();
+                        stream.Write(image, 0, image.Length);
+                        con.Close();
+                        Bitmap bitmap = new Bitmap(stream);
+                        myform.pictureBox_barcode.Image = bitmap;
+                        con.Close();
+                    }
+                }
+            }
+
+            myform.btn_save.Enabled = false;
+            myform.btn_update.Enabled = true;
+            myform.ShowDialog();
         }
         public string getvendor(int val)
         {
@@ -197,6 +203,11 @@ namespace POS_and_Inventory
             if (e.KeyCode == Keys.Insert)
             {
                 picbox_addproduct_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.Enter)
+            {
+                int ri = dataGridView1.CurrentRow.Index;
+                editproduct(ri);
             }
         }
 

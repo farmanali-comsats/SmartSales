@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_category));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_category));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
             this.picbox_addcategory = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,8 @@
             this.Column_BRAND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDIT = new System.Windows.Forms.DataGridViewImageColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tft_search = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_search = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_addcategory)).BeginInit();
@@ -50,6 +52,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.tft_search);
+            this.panel1.Controls.Add(this.lbl_search);
             this.panel1.Controls.Add(this.pictureBox_cancel);
             this.panel1.Controls.Add(this.picbox_addcategory);
             this.panel1.Controls.Add(this.lbl_categoryitle);
@@ -95,6 +99,9 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -131,6 +138,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(933, 548);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // SNo
             // 
@@ -178,6 +186,51 @@
             this.DELETE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.DELETE.Width = 17;
             // 
+            // tft_search
+            // 
+            this.tft_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.tft_search.CustomButton.Image = null;
+            this.tft_search.CustomButton.Location = new System.Drawing.Point(388, 1);
+            this.tft_search.CustomButton.Name = "";
+            this.tft_search.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.tft_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tft_search.CustomButton.TabIndex = 1;
+            this.tft_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tft_search.CustomButton.UseSelectable = true;
+            this.tft_search.CustomButton.Visible = false;
+            this.tft_search.DisplayIcon = true;
+            this.tft_search.Icon = ((System.Drawing.Image)(resources.GetObject("tft_search.Icon")));
+            this.tft_search.Lines = new string[0];
+            this.tft_search.Location = new System.Drawing.Point(456, 6);
+            this.tft_search.MaxLength = 32767;
+            this.tft_search.Name = "tft_search";
+            this.tft_search.PasswordChar = '\0';
+            this.tft_search.PromptText = "Search Here";
+            this.tft_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tft_search.SelectedText = "";
+            this.tft_search.SelectionLength = 0;
+            this.tft_search.SelectionStart = 0;
+            this.tft_search.ShortcutsEnabled = true;
+            this.tft_search.Size = new System.Drawing.Size(412, 25);
+            this.tft_search.TabIndex = 11;
+            this.tft_search.UseSelectable = true;
+            this.tft_search.WaterMark = "Search Here";
+            this.tft_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tft_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tft_search.TextChanged += new System.EventHandler(this.tft_search_TextChanged);
+            // 
+            // lbl_search
+            // 
+            this.lbl_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_search.Location = new System.Drawing.Point(364, 9);
+            this.lbl_search.Name = "lbl_search";
+            this.lbl_search.Size = new System.Drawing.Size(86, 19);
+            this.lbl_search.TabIndex = 12;
+            this.lbl_search.Text = "[ F3 ] Search";
+            // 
             // Form_category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -211,5 +264,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_BRAND;
         private System.Windows.Forms.DataGridViewImageColumn EDIT;
         private System.Windows.Forms.DataGridViewImageColumn DELETE;
+        private MetroFramework.Controls.MetroTextBox tft_search;
+        private System.Windows.Forms.Label lbl_search;
     }
 }

@@ -91,7 +91,8 @@
             this.tft_username.CustomButton.Visible = false;
             this.tft_username.DisplayIcon = true;
             this.tft_username.Icon = ((System.Drawing.Image)(resources.GetObject("tft_username.Icon")));
-            this.tft_username.Lines = new string[0];
+            this.tft_username.Lines = new string[] {
+        "admin"};
             this.tft_username.Location = new System.Drawing.Point(12, 264);
             this.tft_username.MaxLength = 32767;
             this.tft_username.Name = "tft_username";
@@ -104,6 +105,7 @@
             this.tft_username.ShortcutsEnabled = true;
             this.tft_username.Size = new System.Drawing.Size(304, 28);
             this.tft_username.TabIndex = 1;
+            this.tft_username.Text = "admin";
             this.tft_username.UseSelectable = true;
             this.tft_username.WaterMark = "Username";
             this.tft_username.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -125,7 +127,8 @@
             this.tft_pass.CustomButton.Visible = false;
             this.tft_pass.DisplayIcon = true;
             this.tft_pass.Icon = ((System.Drawing.Image)(resources.GetObject("tft_pass.Icon")));
-            this.tft_pass.Lines = new string[0];
+            this.tft_pass.Lines = new string[] {
+        "frmn0900"};
             this.tft_pass.Location = new System.Drawing.Point(12, 309);
             this.tft_pass.MaxLength = 32767;
             this.tft_pass.Name = "tft_pass";
@@ -138,6 +141,7 @@
             this.tft_pass.ShortcutsEnabled = true;
             this.tft_pass.Size = new System.Drawing.Size(304, 28);
             this.tft_pass.TabIndex = 2;
+            this.tft_pass.Text = "frmn0900";
             this.tft_pass.UseSelectable = true;
             this.tft_pass.UseSystemPasswordChar = true;
             this.tft_pass.WaterMark = "Password";

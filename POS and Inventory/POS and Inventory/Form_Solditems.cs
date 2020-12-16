@@ -11,7 +11,7 @@ namespace POS_and_Inventory
         mydatabase db = new mydatabase();
         SqlDataReader dr;
         private double profit = 0;
-        private double ttoal = 0;
+        static double ttoal = 0;
         //Form_POS form;
         public String suser;
         static bool ch = false;
@@ -43,6 +43,7 @@ namespace POS_and_Inventory
                 con.Open();
                 if (cb_cashiers.Text == "All Cashier")
                 {
+                    ttoal = 0;
                     cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pname,p.pdesc,c.price,c.qty,c.disc,c.total from table_cart as c inner join table_products as p on c.pcode = p.pcode where status like 'Sold' and sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "' and (c.transno like '%" + tft_search.Text + "%' or p.pname like '%" + tft_search.Text + "%' or p.pdesc like '%" + tft_search.Text + "%') order by c.transno desc", con);
                     dr = cm.ExecuteReader();
                     while (dr.Read())
@@ -56,6 +57,7 @@ namespace POS_and_Inventory
                 }
                 else
                 {
+                    ttoal = 0;
                     cm = new SqlCommand("select id,c.transno,c.pcode,p.pname,p.pdesc,c.price,c.qty,c.disc,c.total from table_cart as c inner join table_products as p on c.pcode = p.pcode where status like 'Sold' and sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "' and cashier like '" + cb_cashiers.Text + "' and (c.transno like '%" + tft_search.Text + "%'or p.pname like '%" + tft_search.Text + "%' or p.pdesc like '%" + tft_search.Text + "%') order by c.transno desc", con);
                     dr = cm.ExecuteReader();
                     while (dr.Read())
@@ -191,6 +193,9 @@ namespace POS_and_Inventory
 
                     this.Dispose();
                 }
+            }else if (e.Modifiers == Keys.Alt && e.Modifiers==Keys.RShiftKey && e.KeyCode == Keys.F12)
+            {
+                btn_profit_Click(sender,e);
             }
         }
 
@@ -202,7 +207,11 @@ namespace POS_and_Inventory
             }
             else
             {
-                Profitcalculate();
+                if (cb_cashiers.Text!=string.Empty)
+                {
+                    Profitcalculate();
+                }
+                
             }
         }
         public void Profitcalculate()
@@ -210,13 +219,24 @@ namespace POS_and_Inventory
             profit = 0;
             try
             {
-                con.Open();
-                cm = new SqlCommand("select isnull(sum(costtotal),0) as costtotal from table_cart where sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "'and status like 'Sold'", con);
-                profit = double.Parse(cm.ExecuteScalar().ToString());
-                profit = ttoal - profit;
-                con.Close();
+                if (cb_cashiers.Text != "All Cashier")
+                {
+                    con.Open();
+                    cm = new SqlCommand("select isnull(sum(costtotal),0) as costtotal from table_cart where sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "' and cashier like '" + cb_cashiers.Text + "' and status like 'Sold'", con);
+                    profit = double.Parse(cm.ExecuteScalar().ToString());
+                    profit = ttoal - profit;
+                    con.Close();
 
-                lbl_profit.Text = profit.ToString("#,##0.00");
+                    lbl_profit.Text = profit.ToString("#,##0.00");
+                }
+                else {
+                    con.Open();
+                    cm = new SqlCommand("select isnull(sum(costtotal),0) as costtotal from table_cart where sdate between '" + dt1.Value.ToString("yyyy-MM-dd") + "' and '" + dt2.Value.ToString("yyyy-MM-dd") + "'and status like 'Sold'", con);
+                    profit = double.Parse(cm.ExecuteScalar().ToString());
+                    profit = ttoal - profit;
+                    con.Close();
+
+                    lbl_profit.Text = profit.ToString("#,##0.00"); }
             }
             catch (Exception ex)
             {

@@ -18,6 +18,7 @@ namespace POS_and_Inventory
         SqlCommand cm = new SqlCommand();
         mydatabase db = new mydatabase();
         SqlDataReader dr;
+        Form_Stocks frmst = new Form_Stocks();
         public Form1()
         {
             InitializeComponent();
@@ -218,7 +219,15 @@ namespace POS_and_Inventory
         {
             if (e.KeyCode == Keys.Escape)
             {
-                btn_dashboard_Click(sender, e);
+                if (frmst.dataGridView2.Rows.Count>0)
+                {
+                    
+                }
+                else
+                {
+                    btn_dashboard_Click(sender, e);
+                }
+                
             }
             else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.F4)
             {

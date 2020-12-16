@@ -284,7 +284,7 @@
             this.dt1.Name = "dt1";
             this.dt1.Size = new System.Drawing.Size(125, 25);
             this.dt1.TabIndex = 6;
-            this.dt1.Value = new System.DateTime(2020, 11, 28, 0, 0, 0, 0);
+            this.dt1.Value = new System.DateTime(2020, 12, 4, 1, 20, 6, 0);
             this.dt1.ValueChanged += new System.EventHandler(this.dt1_ValueChanged);
             // 
             // dt2

@@ -68,6 +68,8 @@ namespace POS_and_Inventory
             {
                 FormSearchinstockin myform = new FormSearchinstockin(this);
                 myform.loadproducts();
+                myform.tft_search.Enabled = true;
+                myform.tft_search.Focus();
                 myform.ShowDialog();
             }
             else
@@ -81,18 +83,11 @@ namespace POS_and_Inventory
             try
             {
                 String colname = dataGridView2.Columns[e.ColumnIndex].Name;
+                int ri = dataGridView2.CurrentRow.Index;
                 //MessageBox.Show(colname);
                 if (colname == "DELETE")
                 {
-                    if (MessageBox.Show("Remove this item?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        con.Open();
-                        cm = new SqlCommand("delete from table_stockin where id = '" + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
-                        cm.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Item has been Successfully Deleted", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        loadstockin();
-                    }
+                    deletefrom(ri);
 
                 }
             }
@@ -102,7 +97,25 @@ namespace POS_and_Inventory
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+        public void deletefrom(int ri)
+        {
+            try
+            {
+                if (MessageBox.Show("Remove this item?", "POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    cm = new SqlCommand("delete from table_stockin where id = '" + dataGridView2.Rows[ri].Cells[1].Value.ToString() + "'", con);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    //MessageBox.Show("Item has been Successfully Deleted", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadstockin();
+                }
+            }
+            catch (Exception ex)
+            {
 
+            }
+        }
         private void btn_save_Click(object sender, EventArgs e)
         {
             try
@@ -163,8 +176,10 @@ namespace POS_and_Inventory
 
         public void clear()
         {
-            tft_stockinby.Clear();
+            //tft_stockinby.Clear();
             tft_referenceno.Clear();
+            Random r = new Random();
+            tft_referenceno.Text += r.Next();
             dtp_stockindate.Value = DateTime.Now;
         }
 
@@ -175,7 +190,7 @@ namespace POS_and_Inventory
 
         private void cb_vendor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            
         }
 
         private void cb_vendor_TextChanged(object sender, EventArgs e)
@@ -186,7 +201,7 @@ namespace POS_and_Inventory
                 tft_address.Text = "";
                 cb_vname.Items.Clear();
                 con.Open();
-                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "'order by contactperson", con);
+                cm = new SqlCommand("select * from table_vendor where vendor like '" + cb_vendor.Text + "'", con);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
@@ -197,6 +212,7 @@ namespace POS_and_Inventory
             }
             catch (Exception ex)
             {
+                dr.Close();
                 con.Close();
                 MessageBox.Show(ex.Message, stitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -241,6 +257,51 @@ namespace POS_and_Inventory
         private void cb_vname_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.Rows.Count>0) {
+                deleteallfrom();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void dataGridView2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                int ri = dataGridView2.CurrentRow.Index;
+                deletefrom(ri);
+            }else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.Delete)
+            {
+                btn_clear_Click(sender,e);
+            }else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.S)
+            {
+                btn_save_Click(sender,e);
+            }
+        }
+        public void deleteallfrom()
+        {
+            try
+            {
+                if (MessageBox.Show("CLear all items?", "Smart Sales", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    cm = new SqlCommand("delete from table_stockin where refno like '" + tft_referenceno.Text + "' and status like 'Pending'", con);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    //MessageBox.Show("Item has been Successfully Deleted", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadstockin();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

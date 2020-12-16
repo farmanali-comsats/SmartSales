@@ -35,7 +35,7 @@ namespace POS_and_Inventory
             int i = 0;
             dataGridView1.Rows.Clear();
             con.Open();
-            cm = new SqlCommand("select * from table_customers where customername like '" + tft_search.Text + "%'", con);
+            cm = new SqlCommand("select * from table_customers where customername like '%" + tft_search.Text + "%'", con);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
@@ -92,6 +92,20 @@ namespace POS_and_Inventory
         private void tft_search_TextChanged(object sender, EventArgs e)
         {
             loadcustomers();
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            int ri = dataGridView1.CurrentRow.Index;
+            if (e.KeyCode == Keys.Enter)
+            {
+                f.lbl_cid.Text = dataGridView1[1, ri].Value.ToString();
+                f.tft_customer.Text = dataGridView1[2, ri].Value.ToString();
+                this.Dispose();
+            }else if (e.KeyCode == Keys.F3)
+            {
+                tft_search.Focus();
+            }
         }
     }
 }
