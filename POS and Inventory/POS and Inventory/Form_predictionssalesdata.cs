@@ -16,10 +16,20 @@ namespace POS_and_Inventory
         public Form_predictionssalesdata()
         {
             InitializeComponent();
-        }
-        public void loadimages()
+            this.KeyPreview = true;
+        }        
+
+        private void pictureBox_cancel_Click(object sender, EventArgs e)
         {
-            
+            this.Dispose();
+        }
+
+        private void Form_predictionssalesdata_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                pictureBox_cancel_Click(sender,e);
+            }
         }
     }
 }

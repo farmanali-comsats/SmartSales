@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_predictionssalesdata));
             this.panel_top = new System.Windows.Forms.Panel();
-            this.lbl_title = new System.Windows.Forms.Label();
             this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
+            this.lbl_title = new System.Windows.Forms.Label();
             this.panel_main = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_showprofit = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).BeginInit();
             this.panel_main.SuspendLayout();
@@ -51,8 +49,20 @@
             this.panel_top.Location = new System.Drawing.Point(0, 0);
             this.panel_top.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_top.Name = "panel_top";
-            this.panel_top.Size = new System.Drawing.Size(885, 48);
+            this.panel_top.Size = new System.Drawing.Size(537, 48);
             this.panel_top.TabIndex = 6;
+            // 
+            // pictureBox_cancel
+            // 
+            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
+            this.pictureBox_cancel.Location = new System.Drawing.Point(508, 4);
+            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox_cancel.Name = "pictureBox_cancel";
+            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox_cancel.TabIndex = 4;
+            this.pictureBox_cancel.TabStop = false;
+            this.pictureBox_cancel.Click += new System.EventHandler(this.pictureBox_cancel_Click);
             // 
             // lbl_title
             // 
@@ -61,75 +71,56 @@
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(219, 40);
             this.lbl_title.TabIndex = 0;
-            this.lbl_title.Text = "Advanced Settings";
+            this.lbl_title.Text = "Total Profit Predicted";
             this.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox_cancel
-            // 
-            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
-            this.pictureBox_cancel.Location = new System.Drawing.Point(856, 4);
-            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox_cancel.Name = "pictureBox_cancel";
-            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
-            this.pictureBox_cancel.TabIndex = 4;
-            this.pictureBox_cancel.TabStop = false;
-            this.pictureBox_cancel.Visible = false;
             // 
             // panel_main
             // 
-            this.panel_main.Controls.Add(this.listView1);
+            this.panel_main.Controls.Add(this.label1);
+            this.panel_main.Controls.Add(this.lbl_showprofit);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_main.Location = new System.Drawing.Point(0, 48);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(885, 556);
+            this.panel_main.Size = new System.Drawing.Size(537, 170);
             this.panel_main.TabIndex = 7;
             // 
-            // listView1
+            // lbl_showprofit
             // 
-            this.listView1.BackColor = System.Drawing.Color.Azure;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(885, 556);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lbl_showprofit.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_showprofit.ForeColor = System.Drawing.Color.Green;
+            this.lbl_showprofit.Location = new System.Drawing.Point(12, 67);
+            this.lbl_showprofit.Name = "lbl_showprofit";
+            this.lbl_showprofit.Size = new System.Drawing.Size(513, 49);
+            this.lbl_showprofit.TabIndex = 0;
+            this.lbl_showprofit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // columnHeader1
+            // label1
             // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 100;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Description";
-            this.columnHeader2.Width = 160;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Path";
-            this.columnHeader3.Width = 260;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(503, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "This is total profit. Calculated by Subtracting total Cost from Total Price.";
             // 
             // Form_predictionssalesdata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(885, 604);
+            this.ClientSize = new System.Drawing.Size(537, 218);
             this.ControlBox = false;
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_predictionssalesdata";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_predictionssalesdata_KeyDown);
             this.panel_top.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).EndInit();
             this.panel_main.ResumeLayout(false);
+            this.panel_main.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -140,9 +131,7 @@
         private System.Windows.Forms.PictureBox pictureBox_cancel;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Panel panel_main;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lbl_showprofit;
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_settings));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
             this.lbl_categoryitle = new System.Windows.Forms.Label();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -45,22 +46,21 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_sessionalpredict = new System.Windows.Forms.Button();
             this.btn_salepredict = new System.Windows.Forms.Button();
             this.btn_productpredict = new System.Windows.Forms.Button();
             this.btn_profitpredict = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_savenoti = new MetroFramework.Controls.MetroLabel();
+            this.btn_opendb = new System.Windows.Forms.Button();
             this.tft_restoredb = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_restoredb = new System.Windows.Forms.Button();
             this.btn_backup = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.openbackupfile = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox_cancel = new System.Windows.Forms.PictureBox();
-            this.btn_opendb = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,7 +70,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,6 +83,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(935, 48);
             this.panel1.TabIndex = 5;
+            // 
+            // pictureBox_cancel
+            // 
+            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
+            this.pictureBox_cancel.Location = new System.Drawing.Point(906, 4);
+            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox_cancel.Name = "pictureBox_cancel";
+            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox_cancel.TabIndex = 4;
+            this.pictureBox_cancel.TabStop = false;
+            this.pictureBox_cancel.Visible = false;
             // 
             // lbl_categoryitle
             // 
@@ -247,10 +258,9 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btn_sessionalpredict, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_salepredict, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_productpredict, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_profitpredict, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_salepredict, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -260,22 +270,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(687, 380);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
-            // btn_sessionalpredict
-            // 
-            this.btn_sessionalpredict.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_sessionalpredict.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_sessionalpredict.FlatAppearance.BorderSize = 2;
-            this.btn_sessionalpredict.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_sessionalpredict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sessionalpredict.ForeColor = System.Drawing.Color.White;
-            this.btn_sessionalpredict.Location = new System.Drawing.Point(3, 3);
-            this.btn_sessionalpredict.Name = "btn_sessionalpredict";
-            this.btn_sessionalpredict.Size = new System.Drawing.Size(337, 184);
-            this.btn_sessionalpredict.TabIndex = 38;
-            this.btn_sessionalpredict.Text = "Sessional Forecast";
-            this.btn_sessionalpredict.UseVisualStyleBackColor = false;
-            this.btn_sessionalpredict.Click += new System.EventHandler(this.btn_sessionalpredict_Click);
-            // 
             // btn_salepredict
             // 
             this.btn_salepredict.BackColor = System.Drawing.Color.CadetBlue;
@@ -284,9 +278,9 @@
             this.btn_salepredict.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_salepredict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salepredict.ForeColor = System.Drawing.Color.White;
-            this.btn_salepredict.Location = new System.Drawing.Point(346, 193);
+            this.btn_salepredict.Location = new System.Drawing.Point(3, 3);
             this.btn_salepredict.Name = "btn_salepredict";
-            this.btn_salepredict.Size = new System.Drawing.Size(338, 184);
+            this.btn_salepredict.Size = new System.Drawing.Size(337, 184);
             this.btn_salepredict.TabIndex = 41;
             this.btn_salepredict.Text = "Sale Forecast";
             this.btn_salepredict.UseVisualStyleBackColor = false;
@@ -304,7 +298,7 @@
             this.btn_productpredict.Name = "btn_productpredict";
             this.btn_productpredict.Size = new System.Drawing.Size(338, 184);
             this.btn_productpredict.TabIndex = 39;
-            this.btn_productpredict.Text = "Product Forecast";
+            this.btn_productpredict.Text = "Monthly Forecast";
             this.btn_productpredict.UseVisualStyleBackColor = false;
             this.btn_productpredict.Click += new System.EventHandler(this.btn_productpredict_Click);
             // 
@@ -322,6 +316,7 @@
             this.btn_profitpredict.TabIndex = 40;
             this.btn_profitpredict.Text = "Profit Forecast";
             this.btn_profitpredict.UseVisualStyleBackColor = false;
+            this.btn_profitpredict.Click += new System.EventHandler(this.btn_profitpredict_Click);
             // 
             // tabPage3
             // 
@@ -357,6 +352,24 @@
             this.lbl_savenoti.Size = new System.Drawing.Size(0, 0);
             this.lbl_savenoti.TabIndex = 42;
             this.lbl_savenoti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_opendb
+            // 
+            this.btn_opendb.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_opendb.FlatAppearance.BorderSize = 0;
+            this.btn_opendb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_opendb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_opendb.ForeColor = System.Drawing.Color.White;
+            this.btn_opendb.Image = ((System.Drawing.Image)(resources.GetObject("btn_opendb.Image")));
+            this.btn_opendb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_opendb.Location = new System.Drawing.Point(552, 133);
+            this.btn_opendb.Name = "btn_opendb";
+            this.btn_opendb.Size = new System.Drawing.Size(114, 23);
+            this.btn_opendb.TabIndex = 41;
+            this.btn_opendb.Text = "   Open .Bak";
+            this.btn_opendb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_opendb.UseVisualStyleBackColor = false;
+            this.btn_opendb.Click += new System.EventHandler(this.btn_opendb_Click);
             // 
             // tft_restoredb
             // 
@@ -442,36 +455,6 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Database";
             // 
-            // pictureBox_cancel
-            // 
-            this.pictureBox_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_cancel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cancel.Image")));
-            this.pictureBox_cancel.Location = new System.Drawing.Point(906, 4);
-            this.pictureBox_cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox_cancel.Name = "pictureBox_cancel";
-            this.pictureBox_cancel.Size = new System.Drawing.Size(26, 27);
-            this.pictureBox_cancel.TabIndex = 4;
-            this.pictureBox_cancel.TabStop = false;
-            this.pictureBox_cancel.Visible = false;
-            // 
-            // btn_opendb
-            // 
-            this.btn_opendb.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_opendb.FlatAppearance.BorderSize = 0;
-            this.btn_opendb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_opendb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_opendb.ForeColor = System.Drawing.Color.White;
-            this.btn_opendb.Image = ((System.Drawing.Image)(resources.GetObject("btn_opendb.Image")));
-            this.btn_opendb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_opendb.Location = new System.Drawing.Point(552, 133);
-            this.btn_opendb.Name = "btn_opendb";
-            this.btn_opendb.Size = new System.Drawing.Size(114, 23);
-            this.btn_opendb.TabIndex = 41;
-            this.btn_opendb.Text = "   Open .Bak";
-            this.btn_opendb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_opendb.UseVisualStyleBackColor = false;
-            this.btn_opendb.Click += new System.EventHandler(this.btn_opendb_Click);
-            // 
             // Form_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -490,6 +473,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_settings_KeyDown);
             this.Resize += new System.EventHandler(this.Form_settings_Resize);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -501,7 +485,6 @@
             this.tabPage3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cancel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -524,7 +507,6 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        public System.Windows.Forms.Button btn_sessionalpredict;
         public System.Windows.Forms.Button btn_salepredict;
         public System.Windows.Forms.Button btn_productpredict;
         public System.Windows.Forms.Button btn_profitpredict;

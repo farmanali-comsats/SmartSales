@@ -374,6 +374,7 @@ namespace POS_and_Inventory
         private void FormSearchinstockin_Load(object sender, EventArgs e)
         {
             //this.Location = Screen.AllScreens[0].WorkingArea.Location;
+            tft_search.Focus();
         }
     }
 }

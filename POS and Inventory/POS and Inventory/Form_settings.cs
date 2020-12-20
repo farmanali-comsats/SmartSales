@@ -12,6 +12,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace POS_and_Inventory
 {
     public partial class Form_settings : Form
     {
+        //Timer timer = new Timer();
         SqlConnection con = new SqlConnection();
         SqlCommand cm = new SqlCommand();
         mydatabase db = new mydatabase();
@@ -262,10 +264,10 @@ namespace POS_and_Inventory
                 {
                     Directory.CreateDirectory(folderPath);
                 }
-                string salesdata = folderPath + @"SmartSales" + DateTime.Today.ToString("dd-MM-yyyy") + ".csv";
-                MessageBox.Show(salesdata);
+                string salesdata = folderPath + @"SmartSalesdaily" + DateTime.Today.ToString("dd-MM-yyyy") + ".csv";
+                //MessageBox.Show(salesdata);
                 File.WriteAllText(salesdata, csv);
-                MessageBox.Show("Successful");
+                MessageBox.Show("Successfully Extracted CSV to /n"+folderPath);
                 con.Close();
                 dr.Close();
             }
@@ -275,33 +277,126 @@ namespace POS_and_Inventory
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void btn_sessionalpredict_Click(object sender, EventArgs e)
+        public void exportmonthlycsv()
         {
-            Form_predictionssalesdata f = new Form_predictionssalesdata();
-            f.ShowDialog();
+            try
+            {
+                con.Open();
+                cm = new SqlCommand("select CONCAT(MONTH(sdate), '/', year(sdate))as date,ISNULL(SUM(total),0.0) as total from table_cart where status like 'Sold' group by MONTH(sdate),YEAR(sdate)", con);
+
+                DataTable dt = new DataTable();
+                da = new SqlDataAdapter(cm);
+                da.Fill(dt);
+                //Build the CSV file data as a Comma separated string.
+                string csv = string.Empty;
+
+                foreach (DataColumn column in dt.Columns)
+                {
+                    //Add the Header row for CSV file.
+                    csv += column.ColumnName + ',';
+                }
+
+                //Add new line.
+                csv += "\r\n";
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    foreach (DataColumn column in dt.Columns)
+                    {
+                        //Add the Data rows.
+                        csv += row[column.ColumnName].ToString().Replace(",", ";") + ',';
+                    }
+
+                    //Add new line.
+                    csv += "\r\n";
+                }
+
+                //Download the CSV file.
+                string folderPath = deftdir + @"\CSV Files\";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+                string salesdata = folderPath + @"SmartSalesmonthly" + DateTime.Today.ToString("MM-yyyy") + ".csv";
+                //MessageBox.Show(salesdata);
+                File.WriteAllText(salesdata, csv);
+                MessageBox.Show("Successfully Extracted CSV to /n" + folderPath);
+                con.Close();
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void predictprofit() { 
+            try
+            {
+                //timer.Stop();
+                Form_predictionssalesdata frm = new Form_predictionssalesdata();
+                double profit = 0;
+                con.Open();
+                cm = new SqlCommand(" select ISNULL(SUM(price),0.00) -(select ISNULL(SUM(cost),0.00) from table_products) as profit from table_products", con);
+                profit = double.Parse(cm.ExecuteScalar().ToString());
+                frm.lbl_showprofit.Text = profit.ToString();
+                frm.Show();
+                
+                con.Close();
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                //timer.Stop();
+                con.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btn_productpredict_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var script = @"D:\\Python Apps\\pyguitesting.py";
-                var psi = new ProcessStartInfo()
-                {
-                    FileName = "ipy.exe",
-                    Arguments = $"\"{script}\"",
-                    UseShellExecute = false,
-                    CreateNoWindow = false
-                };
+            //try
+            //{
+            //    var script = @"D:\\Python Apps\\pyguitesting.py";
+            //    var psi = new ProcessStartInfo()
+            //    {
+            //        FileName = "ipy.exe",
+            //        Arguments = $"\"{script}\"",
+            //        UseShellExecute = false,
+            //        CreateNoWindow = false
+            //    };
 
-                Process python = new Process();
-                python.StartInfo = psi;
-            }
-            catch (Exception ex)
-            {
+            //    Process python = new Process();
+            //    python.StartInfo = psi;
+            //}
+            //catch (Exception ex)
+            //{
 
-            }
+            //}
+            exportmonthlycsv();
+        }
+
+        private void btn_profitpredict_Click(object sender, EventArgs e)
+        {
+
+            //timer.Interval = (5000);
+            //timer.Tick += new EventHandler(stratprediction);
+            ////predictprofit();
+            //timer.Start();
+            int mydel = 4000;
+            Thread.Sleep(mydel);
+            predictprofit();
+        }
+        public void stratprediction(object s,EventArgs e)
+        {
+            //MessageBox.Show(timer.Interval.ToString());
+            //if (timer.ToString() == "5000")
+            //{
+            //    //MessageBox.Show("5000");
+            //    predictprofit();
+            //    //timer.Stop();
+            //}
+            //predictprofit();
         }
     }
 }
