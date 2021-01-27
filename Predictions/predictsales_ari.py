@@ -251,10 +251,10 @@ def startpredictionrnn():
         	return yhat[0,0]
         
         # load dataset
-        series = read_csv('shampoo.csv', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
+        #series = read_csv('shampoo.csv', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
         
         # transform data to be stationary
-        raw_values = series.values
+        raw_values = rnnseries.values
         diff_values = difference(raw_values, 1)
         
         # transform data to be supervised learning
@@ -802,7 +802,7 @@ def startpredictionarima():
             obs = y[i]
             history.append(obs)
             print('>Predicted=%.3f, Expected=%3.f' % (yhat, obs))
-        prediction = DataFrame(predictions, columns=['predictionsbyarima']).to_csv('prediction.csv')
+        prediction = DataFrame(predictions, columns=['predictions']).to_csv('predictionbyarima.csv')
         # report performance
         mse = mean_squared_error(y, predictions)
         rmse = sqrt(mse)
@@ -921,6 +921,9 @@ class Toplevel1:
                 global df
                 df = read_csv('Daily_sales.csv',delimiter=';',index_col='date')
                 startpredictiondaily()   
+
+        def parser(x):
+        	return datetime.strptime('190'+x, '%Y-%m')        
                 
         def checktftfilernn():
             datasetfile = self.tft_file.get("1.0",'end-1c')
@@ -928,6 +931,8 @@ class Toplevel1:
                 messagebox.showerror("Dataset Error","Could not find the dataset")
             else:
                 #Toplevel1.updatepr(self)
+                global rnnseries
+                rnnseries = read_csv('datasetforRNN.csv', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
                 startpredictionrnn()
 
         # self.btn_start = ttk.Button(self.main_frame, command=checktftfile)
@@ -948,7 +953,7 @@ class Toplevel1:
         self.btn_startrnn = ttk.Button(self.main_frame, command=checktftfilernn)
         self.btn_startrnn.place(relx=0.32, rely=0.387, height=45, width=216)
         self.btn_startrnn.configure(takefocus="")
-        self.btn_startrnn.configure(text='''Start Sale Forecasting Monthly RNN''')
+        self.btn_startrnn.configure(text='''Start Sessional Forecasting''')
 
         # self.lbl_msginfo = tk.Label(self.main_frame)
         # self.lbl_msginfo.place(relx=0.22, rely=0.566, height=21, width=504)
